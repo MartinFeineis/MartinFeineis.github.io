@@ -8,19 +8,19 @@ export default{
             pictures: [
               {
               id: "1",
-              src: "/picture1.jpeg",
+              src: "https://www.404founders.com/picture1.jpeg",
               isActive: true,
               altText: "Celebrating Open Source Techonolgy for Enterprise"
               },
               {
               id: "2",
-              src: "/picture2.jpeg",
+              src: "https://www.404founders.com/picture2.jpeg",
               isActive: false,
               altText: "Bewerbungsfoto"
               },
               {
               id: "3",
-              src: "/picture3.jpeg",
+              src: "https://www.404founders.com/picture3.jpeg",
               isActive: false,
               altText: "Professional picture from company conference"
               }
