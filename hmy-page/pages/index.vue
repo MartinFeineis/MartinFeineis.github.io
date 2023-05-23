@@ -8,6 +8,9 @@
     <title>Resume Martin Feineis</title>
   </head>
     <div>
-<h1>Hello World</h1>
+        <Header />
+        <Profile />
+        <SendMessage to:martinfeineis/>
+        <Jobs />
     </div>
   </template>
