@@ -8,7 +8,6 @@
     <title>Resume Martin Feineis</title>
   </head>
     <div>
-        <Header />
         <Profile />
         <SendMessage to:martinfeineis/>
         <Jobs />
