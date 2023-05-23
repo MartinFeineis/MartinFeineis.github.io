@@ -4,7 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate && cp -r hmy-page/.output/public/ /workspaces/MartinFeineis.github.io/",
+    "generate": "nuxt generate && cp -r /workspaces/MartinFeineis.github.io/hmy-page/.output/public/ /workspaces/MartinFeineis.github.io/",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
