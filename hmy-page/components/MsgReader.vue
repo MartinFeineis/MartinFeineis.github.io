@@ -10,7 +10,7 @@ export default {
     methods: {
         async fetchGitHubUsers(){
             console.log(this.msgIds)
-            const res = await fetch('https://x0965xyrik.execute-api.us-east-1.amazonaws.com/http_api-stage/read/' + this.nextMsg )
+            const res = await fetch('https://api.404founders.com/read/' + this.nextMsg )
             const data = await res.json()
             let Msg = { Id: data.MsgId.Item.MsgID.N, number: this.nextId, Text: data.MsgId.Item.Message.S, Sender: data.MsgId.Item.Sender.S, Recipient: data.MsgId.Item.Recipient.S }
             this.nextId += 1

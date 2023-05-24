@@ -27,7 +27,7 @@ export default {
     methods: {
         async uploadMessage(){
           var msgBody = { "Sender": this.sender, "Recipient": this.recipient, "Message": this.message };
-          var url = "https://aue7w0ag10.execute-api.us-east-1.amazonaws.com:443/stage/send";
+          var url = "https://api.404founders.com/send";
           const res = await fetch(url, {
             method: 'POST',
             headers: {
