@@ -34,7 +34,10 @@ jobs:
       - name: Debugging
         working-directory: ./hmy-page
         id: debugger
-        run: echo "Hello WOrld"
+        run: |
+          ls -lah
+          pwd
+          echo "Hello WOrld"
       - name: Detect package manager
         working-directory: ./hmy-page
         id: detect-package-manager
