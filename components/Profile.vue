@@ -4,7 +4,8 @@ export default{
     data(){
         return{
             Name: "Martin Feineis",
-            Description: "My experience with Golang, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",            pictures: [
+            Description: "No more experience.",
+            pictures: [
               {
               id: "1",
               src: "https://www.404founders.com/picture1.jpeg",
