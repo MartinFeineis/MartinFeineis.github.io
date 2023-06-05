@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <Header />
     <div>
       <form>
         <label for="original-mortgage">Original Mortgage:</label>
