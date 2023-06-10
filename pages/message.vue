@@ -15,7 +15,6 @@
       <Sendmsg />
       <Msgreader />
     </div>
-    <script type="module" src="/nested/src/main.js"></script>
 </body>
 
 </html></template>
