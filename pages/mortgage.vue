@@ -24,7 +24,7 @@
         <label for="current-balance">Current Balance:</label>
         <input type="text" id="current-balance" name="current-balance"><br><br>
   
-        <button type="submit" @click.prevent="calculateMortgageBalance">Calculate</button>
+        <button class="btn btn-primary" type="submit" @click.prevent="calculateMortgageBalance">Calculate</button>
       </form>
   
       <table v-if="mortgageBalance.length">
@@ -61,7 +61,6 @@
     methods: {
       calculateMortgageBalance() {
         const { originalMortgage, interestRate, remainingPayments, currentBalance } = this;
-  
         let balance = parseFloat(currentBalance);
         let monthlyInterestRate = parseFloat(interestRate) / 12;
         let totalPayments = parseFloat(remainingPayments);
@@ -70,6 +69,7 @@
           (monthlyInterestRate * balance) /
           (1 - Math.pow(1 + monthlyInterestRate, -totalPayments));
   
+        console.log("Here comes the data: ", this.currentBalance, interestRate) 
         for (let i = 0; i <= totalPayments; i++) {
           let interestPaid = balance * monthlyInterestRate;
           let principalPaid = monthlyPayment - interestPaid;

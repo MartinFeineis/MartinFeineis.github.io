@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  target: 'static',
+  routeRules: {
+    '/': {prerender: true},
+    '/message' : { prerender: true}
+  },
   devtools: { enabled: true },
   app: {
     head: {

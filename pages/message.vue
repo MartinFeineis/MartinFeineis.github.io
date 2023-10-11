@@ -11,7 +11,6 @@
 
   <body>
     <div>
-      <Header />
       <Sendmsg />
       <Msgreader />
     </div>

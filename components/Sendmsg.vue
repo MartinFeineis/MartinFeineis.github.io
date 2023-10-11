@@ -2,7 +2,7 @@
 export default {
     data(){
         return{
-            showTo: false,
+            showTo: true,
             showFrom: true,
             showMsg: true,
             sender: '',
