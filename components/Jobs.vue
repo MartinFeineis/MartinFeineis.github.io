@@ -9,11 +9,25 @@ export default {
                     selectStr: "#Cognizant",
                     Positions: [
                         {
+                        id: '43',
+                        Title: "Technical Principal",
+                        Responsibilites: "Managing technial understanding and deliverable between client and engineering team. Ensuring contractual obligations are fulfilled within the agreed upon time and quality. Creating personalized training manuals for engineering teams for team specific cases. ",
+                        StartDate: "October 2023",
+                        EndDate: "present"
+                        },
+                        {
+                        id: '42',
+                        Title: "Software Engineering Manager",
+                        Responsibilities: "Creating Value Stream Maps to identify waste and decrease development time by up to 20%. Train Engineering Teams on best cloud practices and architectural desicion making to decrease cloud spending , increase security posture and following general and specific best practices.",
+                        StartDate: "September 2022",
+                        EndDate: "October 2023"
+                        },
+                        {
                         id: '41',
                         Title: "Lead Consultant",
                         Responsibilities: "Wrote DO178C complaint Terraform IaC in AWS to for remote Pilots to communicate with unmanned aerial vehicles. Upskilled Engineering Team on Terraform basics industry best practices and CI/CD Implementations. Wrote HIPPA compliant serverless Cloudformation IaC and business logic in Python for Healthcare customers to solve crossstate plan coverage.",
                         StartDate: "January 2021",
-                        EndDate: "present"
+                        EndDate: "September 2022"
                         }
                     ]
                 },

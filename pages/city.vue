@@ -1,3 +1,3 @@
 <template>
-<h1>Profile Name</h1>
+<h1>City Page</h1>
 </template>
