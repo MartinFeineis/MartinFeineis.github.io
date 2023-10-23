@@ -12,7 +12,7 @@ export default {
                         id: '43',
                         Title: "Technical Principal",
                         Responsibilites: "Managing technial understanding and deliverable between client and engineering team. Ensuring contractual obligations are fulfilled within the agreed upon time and quality. Creating personalized training manuals for engineering teams for team specific cases. ",
-                        StartDate: "October 2023",
+                        StartDate: "November 2022",
                         EndDate: "present"
                         },
                         {
@@ -20,12 +20,12 @@ export default {
                         Title: "Software Engineering Manager",
                         Responsibilities: "Creating Value Stream Maps to identify waste and decrease development time by up to 20%. Train Engineering Teams on best cloud practices and architectural desicion making to decrease cloud spending , increase security posture and following general and specific best practices.",
                         StartDate: "September 2022",
-                        EndDate: "October 2023"
+                        EndDate: "November 2022"
                         },
                         {
                         id: '41',
                         Title: "Lead Consultant",
-                        Responsibilities: "Wrote DO178C complaint Terraform IaC in AWS to for remote Pilots to communicate with unmanned aerial vehicles. Upskilled Engineering Team on Terraform basics industry best practices and CI/CD Implementations. Wrote HIPPA compliant serverless Cloudformation IaC and business logic in Python for Healthcare customers to solve crossstate plan coverage.",
+                        Responsibilities: "Wrote DO178C complaint Terraform IaC in AWS to for remote Pilots to communicate with unmanned aerial vehicles. Trained Engineering Team on Terraform industry best practices and CI/CD Implementations. Developed and implemented one-click IaC solution to accelerate cloud adoption by 50%. Wrote HIPPA compliant serverless Cloudformation IaC and business logic in Python for Healthcare customers to solve crossstate plan coverage.",
                         StartDate: "January 2021",
                         EndDate: "September 2022"
                         }
@@ -39,7 +39,7 @@ export default {
                         {
                         id: '31',
                         Title: "SRE",
-                        Responsibilities: "Build Serverless Application for Mortgage Brokers to submit Property Data for commercial real estate developments.",
+                        Responsibilities: "Build Serverless Application for Mortgage Brokers to submit Property Data for commercial real estate developments. Accelerated deal-closing time by 300%",
                         StartDate: "May 2020",
                         EndDate: "December 2020"
                         },
@@ -60,7 +60,7 @@ export default {
                         {
                         id: '21',
                         Title: "SRE",
-                        Responsibilities: "Maintained and improved HIPAA compliant AWS Software with focus on high availability, and self-healing rapid failover processes.",
+                        Responsibilities: "Maintained and improved HIPAA compliant AWS Software with focus on high availability, and self-healing rapid failover processes. Increased resiliency and overall operating model",
                         StartDate: "April 2017",
                         EndDate: "April 2018"
                         }
@@ -74,7 +74,7 @@ export default {
                         {
                         id: '11',
                         Title: "DevOps Engineer",
-                        Responsibilities: "Build 1-click CI/CD Pipeline allowing globally distributed Engineers to deploy changes reliable into Development environments including rollback strategies.",
+                        Responsibilities: "Build 1-click CI/CD Pipeline allowing globally distributed Engineers to deploy changes reliable into Development environments including rollback strategies. Decreasing deployment time from 24hours to 20min.",
                         StartDate: "Deember 2014",
                         EndDate: "March 2017"
                         }
