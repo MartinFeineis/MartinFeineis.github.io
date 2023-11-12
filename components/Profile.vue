@@ -5,6 +5,7 @@ export default{
         return{
             Name: "Martin Feineis",
             Description: "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
+            TechStack: "Terraform, AWS, Vue.js, Nuxt.Js",
             pictures: [
               {
               id: "1",
@@ -51,6 +52,10 @@ export default{
   <div class="col-md-8">
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
+    <div>
+        <p>{{ TechStack }}</p>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
+    </div>
   </div>
 </div>
 </template>
