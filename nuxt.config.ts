@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   target: 'static',
+  ssr: false,
   routeRules: {
     '/': {prerender: true},
-    '/message' : { prerender: true}
+    //'/message/index.html' : { prerender: true},
+    '/mortgage' : { prerender: true},
   },
   devtools: { enabled: true },
   app: {

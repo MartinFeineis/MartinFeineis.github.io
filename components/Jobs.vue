@@ -11,8 +11,8 @@ export default {
                         {
                         id: '43',
                         Title: "Technical Principal",
-                        Responsibilites: "Managing technial understanding and deliverable between client and engineering team. Ensuring contractual obligations are fulfilled within the agreed upon time and quality. Creating personalized training manuals for engineering teams for team specific cases. ",
-                        StartDate: "November 2022",
+                        Responsibilities: "Managing technial understanding and deliverable between client and engineering team. Ensuring contractual obligations are fulfilled within the agreed upon time and quality. Creating personalized training manuals for engineering teams for team specific cases. Training junior Technical Principals in client management. Building out CCoE based on AWS Well architected Framework, decreased cloud spending, increased and visualized security posture of AWS Accounts, Architecture and Software.",
+                        StartDate: "October 2023",
                         EndDate: "present"
                         },
                         {
