@@ -30,6 +30,13 @@ export default{
     }
 }
 </script>
+<style scoped>
+    img.lang {
+        width: 60px;
+        height: 60px; 
+        padding: 10px;
+    }
+</style>
 <template>
   <div class="row g-0">
     <div class="col-md-4">
@@ -54,7 +61,12 @@ export default{
     <p>{{ Description }}</p>
     <div>
         <p>{{ TechStack }}</p>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
     </div>
   </div>
 </div>
