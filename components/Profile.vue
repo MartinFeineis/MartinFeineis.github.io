@@ -42,19 +42,19 @@ export default{
 }
 </script>
 <style scoped>
-    img.lang {
+    .lang {
         width: 100px;
         height: 100px; 
         padding: 40px 25px 25px 10px;
     }
-    img.lang:hover {
+    img:hover {
         width: 130px;
         height: 130px;
         padding: 10px 10px 10px 10px;
     }
-    .tsbtn {
+/*     .tsbtn {
       background: url('/forms/up.png') no-repeat top left;
-    }
+    } */
 </style>
 <template>
   <div class="row g-0">
@@ -78,22 +78,20 @@ export default{
   <div class="col-md-8">
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
+    <div>
+        <p>{{ TechStack }}</p>
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
+    </div>
     <div v-for='tech in techstack' :key='techstack.id'>
-        <p>
-            <button class="btn btn-primary tsbtn" v-bind:style="{ 'background-image': 'url(' tech.bgimg ')' }" type="button" data-bs-toggle="collapse" :data-bs-target=job.selectStr  aria-expanded="false" aria-controls="collapseExample"></button>
-        </p>
-        <div class="collapse" :id=job.Company>
-            <!-- <div class="card card-body"> -->
-                <div v-for='position in job.Positions' :key='position.id'>
-                <div class="card card-body">
-                <p>
-                    <h5>{{ position.Title }}</h5>
-                    <p><small>Started: {{ position.StartDate }} Finished: {{ position.EndDate }}</small></p>
-                    <p>{{ position.Responsibilities }}</p>
-                </p>
-                </div>
-            </div>
-        </div>
+      <img :src="tech.bgimg" title="Linux" alt="Linux" width="60" height="60"/>
+<!--         <p>
+            <button class="btn btn-primary" :style="{ backgroundImage: `url(${tech.bgimg})` }" type="button" data-bs-toggle="collapse" :data-bs-target=job.selectStr  aria-expanded="false" aria-controls="collapseExample"></button>
+        </p> -->
     </div>
   </div>
 </div>
