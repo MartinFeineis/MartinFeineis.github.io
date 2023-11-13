@@ -5,7 +5,18 @@ export default{
         return{
             Name: "Martin Feineis",
             Description: "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
-            TechStack: "Terraform, AWS, Vue.js, Nuxt.Js",
+            techstack: [
+              {
+                id: "t1",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+                desc: "plenty of shell scripting"
+              },
+              {
+                id: "t2",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
+                desc: "terraforming everything"
+              }
+            ],
             pictures: [
               {
               id: "1",
@@ -34,11 +45,15 @@ export default{
     img.lang {
         width: 100px;
         height: 100px; 
-        padding: 10px;
+        padding: 40px 25px 25px 10px;
     }
     img.lang:hover {
-        width: 160px;
-        height: 160px; 
+        width: 130px;
+        height: 130px;
+        padding: 10px 10px 10px 10px;
+    }
+    .tsbtn {
+      background: url('/forms/up.png') no-repeat top left;
     }
 </style>
 <template>
@@ -63,14 +78,22 @@ export default{
   <div class="col-md-8">
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
-    <div>
-        <p>{{ TechStack }}</p>
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
+    <div v-for='tech in techstack' :key='techstack.id'>
+        <p>
+            <button class="btn btn-primary tsbtn" v-bind:style="{ 'background-image': 'url(' tech.bgimg ')' }" type="button" data-bs-toggle="collapse" :data-bs-target=job.selectStr  aria-expanded="false" aria-controls="collapseExample"></button>
+        </p>
+        <div class="collapse" :id=job.Company>
+            <!-- <div class="card card-body"> -->
+                <div v-for='position in job.Positions' :key='position.id'>
+                <div class="card card-body">
+                <p>
+                    <h5>{{ position.Title }}</h5>
+                    <p><small>Started: {{ position.StartDate }} Finished: {{ position.EndDate }}</small></p>
+                    <p>{{ position.Responsibilities }}</p>
+                </p>
+                </div>
+            </div>
+        </div>
     </div>
   </div>
 </div>
