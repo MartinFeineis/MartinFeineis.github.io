@@ -36,6 +36,10 @@ export default{
         height: 100px; 
         padding: 10px;
     }
+    img.lang:hover {
+        width: 160px;
+        height: 160px; 
+    }
 </style>
 <template>
   <div class="row g-0">
