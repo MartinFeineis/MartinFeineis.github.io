@@ -52,9 +52,10 @@ export default{
         transition: transform 0.2s ease-in-out;
         fill: red;
     }
-/*     .tsbtn {
-      background: url('/forms/up.png') no-repeat top left;
-    } */
+    .tsbtn {
+      width: 100px;
+      height: 100px;
+    }
 </style>
 <template>
   <div class="row g-0">
@@ -87,7 +88,11 @@ export default{
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
     </div>
-
+    <div>
+      <button class="btn btn-danger" type="button"  style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg');"  aria-expanded="false" aria-controls="collapseExample">
+        Test Butting
+      </button>
+    </div>
     <div v-for='tech in techstack' :key='techstack.id'>
       <img :src="tech.bgimg" title="Linux" alt="Linux" width="60" height="60"/>
 <!--         <p>
