@@ -14,7 +14,17 @@ export default{
               },
               {
                 id: "t2",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+                desc: "Everything in cloud"
+              },
+              {
+                id: "t3",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
+                desc: "terraforming everything"
+              },
+              {
+                id: "t4",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
                 desc: "terraforming everything"
               }
             ],
@@ -81,24 +91,18 @@ export default{
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
     <p>{{ TechStack }}</p>
-    <div>
+    <!-- <div>
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
-    </div>
-    <div>
-      <button class="btn btn-danger tsbtn" type="button"  :style="{ 'background-image': url(image)}"  aria-expanded="false" aria-controls="collapseExample">
-        Test Butting
+    </div> -->
+    <div >
+      <button v-for='tech in techstack' :key='techstack.id' class="btn" type="button"    aria-expanded="false" aria-controls="collapseExample">
+        <img class="tsbtn lang" :src="tech.bgimg" />
       </button>
-    </div>
-    <div v-for='tech in techstack' :key='techstack.id'>
-      <img :src="tech.bgimg" title="Linux" alt="Linux" width="60" height="60"/>
-<!--         <p>
-            <button class="btn btn-primary" :style="{ backgroundImage: `url(${tech.bgimg})` }" type="button" data-bs-toggle="collapse" :data-bs-target=job.selectStr  aria-expanded="false" aria-controls="collapseExample"></button>
-        </p> -->
     </div>
   </div>
 </div>
