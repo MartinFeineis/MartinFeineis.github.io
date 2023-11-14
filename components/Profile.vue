@@ -89,7 +89,7 @@ export default{
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
     </div>
     <div>
-      <button class="btn btn-danger" type="button"  style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg');"  aria-expanded="false" aria-controls="collapseExample">
+      <button class="btn btn-danger tsbtn" type="button"  style="background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg');"  aria-expanded="false" aria-controls="collapseExample">
         Test Butting
       </button>
     </div>
