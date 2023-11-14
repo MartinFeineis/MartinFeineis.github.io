@@ -45,12 +45,12 @@ export default{
     .lang {
         width: 100px;
         height: 100px; 
-        padding: 40px 25px 25px 10px;
+        padding: 10px 15px 10px 15px;
     }
-    img:hover {
-        width: 130px;
-        height: 130px;
-        padding: 10px 10px 10px 10px;
+    img.lang:hover {
+        transform: scale(1.5);
+        transition: transform 0.2s ease-in-out;
+        fill: red;
     }
 /*     .tsbtn {
       background: url('/forms/up.png') no-repeat top left;
@@ -78,8 +78,8 @@ export default{
   <div class="col-md-8">
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
+    <p>{{ TechStack }}</p>
     <div>
-        <p>{{ TechStack }}</p>
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
