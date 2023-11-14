@@ -87,6 +87,12 @@ export default{
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
             <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
     </div>
+<a href="https://github.com/martinfeineis/github-readme-stats">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=martinfeineis" />
+</a>
+<a href="https://github.com/martinfeineis/convoychat">
+  <img height=200 align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=martinfeineis&layout=compact&langs_count=8&card_width=320" />
+</a>
     <div v-for='tech in techstack' :key='techstack.id'>
       <img :src="tech.bgimg" title="Linux" alt="Linux" width="60" height="60"/>
 <!--         <p>
