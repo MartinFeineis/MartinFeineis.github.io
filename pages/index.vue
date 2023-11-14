@@ -7,6 +7,7 @@
   </head>
   <div>
     <Profile />
+    <GitHubStats />
     <Sendmsg to:martinfeineis />
     <Jobs />
 </div></template>
