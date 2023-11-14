@@ -9,30 +9,36 @@ export default{
             techstack: [
               {
                 id: "t1",
+                title: "Linux",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
                 desc: "plenty of shell scripting"
               },
               {
                 id: "t2",
+                title: "AWS",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
                 desc: "Everything in cloud"
               },
               {
                 id: "t3",
+                title: "Terraform",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
                 desc: "terraforming everything"
               },
               {
                 id: "t4",
+                title: "Nuxt",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
                 desc: "terraforming everything"
               },              {
                 id: "t5",
+                title: "Python",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
                 desc: "terraforming everything"
               },
               {
                 id: "t6",
+                title: "Ubuntu",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg",
                 desc: "terraforming everything"
               }
@@ -113,6 +119,18 @@ export default{
         <img class="tsbtn lang" :src="tech.bgimg" />
       </button>
     </div>
+    <div class="collapse" :id=techstack.title>
+            <div class="card card-body">
+                <div v-for='tech in techstack' :key='techstack.id'>
+                <div class="card card-body">
+                <p>
+                    <h5>Hello</h5>
+                    <p>{{ tech.desc }}</p>
+                </p>
+                </div>
+            </div>
+            </div>
+        </div>
   </div>
 </div>
 </template>
