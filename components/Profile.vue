@@ -26,6 +26,15 @@ export default{
                 id: "t4",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
                 desc: "terraforming everything"
+              },              {
+                id: "t5",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
+                desc: "terraforming everything"
+              },
+              {
+                id: "t6",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg",
+                desc: "terraforming everything"
               }
             ],
             pictures: [
