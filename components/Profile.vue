@@ -6,43 +6,6 @@ export default{
             Name: "Martin Feineis",
             image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
             Description: "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
-            techstack: [
-              {
-                id: "t1",
-                title: "Linux",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-                desc: "plenty of shell scripting"
-              },
-              {
-                id: "t2",
-                title: "AWS",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-                desc: "Everything in cloud"
-              },
-              {
-                id: "t3",
-                title: "Terraform",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
-                desc: "terraforming everything"
-              },
-              {
-                id: "t4",
-                title: "Nuxt",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
-                desc: "terraforming everything"
-              },              {
-                id: "t5",
-                title: "Python",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
-                desc: "terraforming everything"
-              },
-              {
-                id: "t6",
-                title: "Ubuntu",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg",
-                desc: "terraforming everything"
-              }
-            ],
             pictures: [
               {
               id: "1",
@@ -67,22 +30,7 @@ export default{
     }
 }
 </script>
-<style scoped>
-    .lang {
-        width: 100px;
-        height: 100px; 
-        padding: 10px 15px 10px 15px;
-    }
-    img.lang:hover {
-        transform: scale(1.5);
-        transition: transform 0.2s ease-in-out;
-        fill: red;
-    }
-    .tsbtn {
-      width: 100px;
-      height: 100px;
-    }
-</style>
+<style></style>
 <template>
   <div class="row g-0">
     <div class="col-md-4">
@@ -106,31 +54,7 @@ export default{
     <h1>{{ Name }}</h1>
     <p>{{ Description }}</p>
     <p>{{ TechStack }}</p>
-    <!-- <div>
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="60" height="60"/>
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS" alt="AWS" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-            <img class="lang" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg" />
-    </div> -->
-    <div >
-      <button v-for='tech in techstack' :key='techstack.id' class="btn" type="button"    aria-expanded="false" aria-controls="collapseExample">
-        <img class="tsbtn lang" :src="tech.bgimg" />
-      </button>
-    </div>
-    <div class="collapse" :id=techstack.title>
-            <div class="card card-body">
-                <div v-for='tech in techstack' :key='techstack.id'>
-                <div class="card card-body">
-                <p>
-                    <h5>Hello</h5>
-                    <p>{{ tech.desc }}</p>
-                </p>
-                </div>
-            </div>
-            </div>
-        </div>
+    <TechIcons />
   </div>
 </div>
 </template>
