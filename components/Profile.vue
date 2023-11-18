@@ -5,7 +5,7 @@ export default{
         return{
             Name: "Martin Feineis",
             image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
-            Description: '<a href="https://www.linkedin.com/in/martinfeineis/" >LikedIn</a>My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes',
+            Description: '<p><div> <a href="https://www.linkedin.com/in/martinfeineis/" >LinkedIn</a></p><p><a href="https://www.xing.com/profile/Martin_Feineis/cv">XING</a></p>I was raised in Waldbüttelbrunn and visited the Deutschhaus Gymnasium in Würzburg where I made my Abitur in 2006. After my military service I studied technical physics at the TU Ilmenau and got my Bachelors degree in 2011. While working at Siemens in Berlin I started my Masters at the FU Hagen in electrical engineering. Since I moved to the United States in 2014 I did not finish my Masters degress and started working in software engineering in Philadelphia. <p></p></div>',
             pictures: [
               {
               id: "1",
