@@ -4,6 +4,7 @@ export default{
         return{
             Name: "Martin Feineis",
             content: 'Hi Content',
+            links: {},
             image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
             Description: "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
             techstack: {
@@ -39,9 +40,11 @@ export default{
               },
               Ubuntu: {
                 id: "t6",
-                title: "Ubuntu",
-                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain-wordmark.svg",
-                desc: "My workstation is running Ubuntu."
+                title: "Git",
+                bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
+                desc: 'My Github Profile',
+                links: [{ target: "https://github.com/MartinFeineis", name : "Github"},
+                        { target: "https://www.linkedin.com/in/martinfeineis/", name : "LinkedIn"}]
               }
             }
         }
@@ -50,6 +53,7 @@ export default{
     changeContent(key) {
       //this.content = newContent; 
       this.content = this.techstack[key].desc;
+      this.links = this.techstack[key].links
     },
   },
 }
@@ -76,7 +80,8 @@ export default{
         <img class="tsbtn lang" :src="tech.bgimg" />
       </button>
     <div>
-        {{ content }}
+        {{ content }}<br>
+        <div v-for="link in links" :key="techstack.id"> <NuxtLink to="{{ link.target }}">{{link.name}}</NuxtLink> </div>
     </div>
     </div>
     <!-- <div v-for='(thing , key, index ) in techstack'>
