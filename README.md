@@ -1,3 +1,5 @@
+https://stackoverflow.com/questions/59327247/cloudfront-cant-find-page-of-nuxt-js-static-site-after-reloading
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

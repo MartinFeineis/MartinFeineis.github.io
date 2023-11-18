@@ -5,7 +5,7 @@ export default{
         return{
             Name: "Martin Feineis",
             image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
-            Description: "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
+            Description: '<a href="https://www.linkedin.com/in/martinfeineis/" >LikedIn</a>My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes',
             pictures: [
               {
               id: "1",
@@ -52,8 +52,7 @@ export default{
 </div>
   <div class="col-md-8">
     <h1>{{ Name }}</h1>
-    <p>{{ Description }}</p>
-    <p>{{ TechStack }}</p>
+    <p v-html="Description"></p>
     <TechIcons />
   </div>
 </div>
