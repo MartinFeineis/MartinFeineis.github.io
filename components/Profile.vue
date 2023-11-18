@@ -5,7 +5,7 @@ export default{
         return{
             Name: "Martin Feineis",
             image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
-            Description: '<p><div> <a href="https://www.linkedin.com/in/martinfeineis/" >LinkedIn</a></p><p><a href="https://www.xing.com/profile/Martin_Feineis/cv">XING</a></p>I was raised in Waldbüttelbrunn and visited the Deutschhaus Gymnasium in Würzburg where I made my Abitur in 2006. After my military service I studied technical physics at the TU Ilmenau and got my Bachelors degree in 2011. While working at Siemens in Berlin I started my Masters at the FU Hagen in electrical engineering. Since I moved to the United States in 2014 I did not finish my Masters degress and started working in software engineering in Philadelphia. <p></p></div>',
+            Description: '<p><div> <a href="https://www.linkedin.com/in/martinfeineis/" >LinkedIn</a></p><p><a href="https://www.xing.com/profile/Martin_Feineis/cv">XING</a></p><p>I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following my military service, I pursued technical physics at Technische Universität Ilmenau, obtaining my Bachelor&#39;s degree in 2011. While working at Siemens in Berlin, I commenced my Masters studies in electrical engineering at FernUniversität Hagen. Upon relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my Master&#39;s degree unfinished."</p></div>',
             pictures: [
               {
               id: "1",
