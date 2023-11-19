@@ -36,7 +36,7 @@ export default{
                 title: "Nuxt",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
                 desc: "This Website was coded and with Vue and Nuxt.js. My Vercel playground contains some more frontend finger exercise I am dabbling with.",
-                links: [{ target: "https://page-collection-git-qrcodereader-martinfeineis-projects.vercel.app/", name : "Vercel Playground"}]
+                links: [{ target: "https://www.rjo.me", name : "Vercel Playground"}]
               },
               Python: {
                 id: "t5",
