@@ -12,7 +12,7 @@ export default{
                 id: "t1",
                 title: "Linux",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-                desc: "plenty of shell scripting",
+                desc: "The projects that are not mission critical run on my Linux server at home. Like PostgresQL, Plex or sometimes Minikube.",
                 links: [{ target: "https://martinfeineis.gitbook.io/newlib/operating-systems/linux/bash", name : "bash"},
                         { target: "https://martinfeineis.gitbook.io/newlib/operating-systems/macosx", name : "MacOSx"}]
               },
@@ -20,7 +20,7 @@ export default{
                 id: "t2",
                 title: "AWS",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-                desc: "Everything in cloud",
+                desc: "I don&#39;t have enough money for my own datacenter, so everything I can&#39;t run on my home server I run in the cloud, like Lambda Functions API Gateways, DynamoDB Tables, VPCs, etc.",
                 links: [{ target: "https://github.com/MartinFeineis", name : "Github"},
                         { target: "https://www.linkedin.com/in/martinfeineis/", name : "LinkedIn"}]
               },
@@ -28,14 +28,14 @@ export default{
                 id: "t3",
                 title: "Terraform",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
-                desc: "terraforming everything",
+                desc: "I am using Terraform to deploy Infrastructure in AWS. My tf-state is stored in S3 and DynamoDB, and most stacks are comprised of hand written modules, some with cross account deployments from a singel Pipeline.",
                 links: [{ target: "https://github.com/MartinFeineis/terraform", name : "TF Playground"}]
               },
               Nuxt: {
                 id: "t4",
                 title: "Nuxt",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
-                desc: "This Website was coded and with Vue and Nuxt.js",
+                desc: "This Website was coded and with Vue and Nuxt.js. My Vercel playground contains some more frontend finger exercise I am dabbling with.",
                 links: [{ target: "https://page-collection-git-qrcodereader-martinfeineis-projects.vercel.app/", name : "Vercel Playground"}]
               },
               Python: {
@@ -43,7 +43,7 @@ export default{
                 title: "Python",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
                 desc: "The backend of the contact me form is running on Python in AWS Lambda Functions.",
-                links: [{ target: "https://martinfeineis.gitbook.io/newlib/languages/python", name : "Tips 'n Tricks"}]
+                links: [{ target: "https://martinfeineis.gitbook.io/newlib/languages/python", name : "Tips &#39;n Tricks"}]
               },
               Ubuntu: {
                 id: "t6",
@@ -86,7 +86,7 @@ export default{
         <img class="tsbtn lang" :src="tech.bgimg" />
       </button>
     <div v-html="content"></div>
-    <div v-for="link in links" :key="techstack.id"> <a v-bind:href="link.target">{{link.name}}</a></div>
+    <div v-for="link in links" :key="techstack.id"> <a v-bind:href="link.target" v-html="link.name"></a></div>
     </div>
     <!-- <div v-for='(thing , key, index ) in techstack'>
        {{ thing }} - {{ key }} - {{ index }}
