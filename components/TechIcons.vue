@@ -12,31 +12,38 @@ export default{
                 id: "t1",
                 title: "Linux",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-                desc: "plenty of shell scripting"
+                desc: "plenty of shell scripting",
+                links: [{ target: "https://martinfeineis.gitbook.io/newlib/operating-systems/linux/bash", name : "bash"},
+                        { target: "https://martinfeineis.gitbook.io/newlib/operating-systems/macosx", name : "MacOSx"}]
               },
               AWS: {
                 id: "t2",
                 title: "AWS",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-                desc: "Everything in cloud"
+                desc: "Everything in cloud",
+                links: [{ target: "https://github.com/MartinFeineis", name : "Github"},
+                        { target: "https://www.linkedin.com/in/martinfeineis/", name : "LinkedIn"}]
               },
               Terraform: {
                 id: "t3",
                 title: "Terraform",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
-                desc: "terraforming everything"
+                desc: "terraforming everything",
+                links: [{ target: "https://github.com/MartinFeineis/terraform", name : "TF Playground"}]
               },
               Nuxt: {
                 id: "t4",
                 title: "Nuxt",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
-                desc: "This Website was coded and with Vue and Nuxt.js"
+                desc: "This Website was coded and with Vue and Nuxt.js",
+                links: [{ target: "https://page-collection-git-qrcodereader-martinfeineis-projects.vercel.app/", name : "Vercel Playground"}]
               },
               Python: {
                 id: "t5",
                 title: "Python",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
-                desc: "The backend of the contact me form is running on Python in AWS Lambda Functions."
+                desc: "The backend of the contact me form is running on Python in AWS Lambda Functions.",
+                links: [{ target: "https://github.com/MartinFeineis", name : "Github"}]
               },
               Ubuntu: {
                 id: "t6",
