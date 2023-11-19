@@ -43,15 +43,14 @@ export default{
                 title: "Python",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
                 desc: "The backend of the contact me form is running on Python in AWS Lambda Functions.",
-                links: [{ target: "https://github.com/MartinFeineis", name : "Github"}]
+                links: [{ target: "https://martinfeineis.gitbook.io/newlib/languages/python", name : "Tips &#39;n Tricks"}]
               },
               Ubuntu: {
                 id: "t6",
                 title: "Git",
                 bgimg: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
-                desc: 'My Github Profile',
-                links: [{ target: "https://github.com/MartinFeineis", name : "Github"},
-                        { target: "https://www.linkedin.com/in/martinfeineis/", name : "LinkedIn"}]
+                desc: 'I am using git to store and managed codebases. I worked with GitHub, AWS CodeCommit and Gitlab. I also used CI/CD Pipelines like Github actions, CircleCI and Jenkins.',
+                links: [{ target: "https://github.com/MartinFeineis", name : "Github"}]
               }
             }
         }
