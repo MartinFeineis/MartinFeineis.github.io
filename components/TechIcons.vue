@@ -85,7 +85,7 @@ export default{
       <button v-for='( tech, key ) in techstack' :key='techstack.id' class="btn" type="button" aria-expanded="false" aria-controls="collapseExample" @click="changeContent(key)">
         <img class="tsbtn lang" :src="tech.bgimg" />
       </button>
-    <div :v-html="content"></div>
+    <div v-html="content"></div>
     <div v-for="link in links" :key="techstack.id"> <a v-bind:href="link.target">{{link.name}}</a></div>
     </div>
     <!-- <div v-for='(thing , key, index ) in techstack'>
