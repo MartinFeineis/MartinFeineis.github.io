@@ -8,21 +8,21 @@
                 {
                     "id": 43,
                     "Title": "Technical Principal",
-                    "Responsibilities": "• Managing technial understanding and deliverable between client and engineering team. Ensuring contractual obligations are fulfilled within the agreed upon time and quality. Creating personalized training manuals for engineering teams for team specific cases. Training junior Technical Principals in client management. Building out CCoE based on AWS Well architected Framework, decreased cloud spending, increased and visualized security posture of AWS Accounts, Architecture and Software. \n • Building and training team to develop and maintain high availaable failover VDI Environment for 8000 Stock Traders.",
+                    "Responsibilities": "• Facilitated technical understanding and deliverables between clients and engineering teams. Ensured fulfillment of contractual obligations within agreed timelines and quality standards. Developed personalized training manuals for team-specific cases and mentored junior Technical Principals in client management. Led the development of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, optimizing cloud costs, enhancing security postures, and improving account architecture. \n • Built and trained a team to develop and maintain a highly available failover VDI environment for 8,000 stock traders.",
                     "StartDate": "October 2023",
                     "EndDate": "present"
                 },
                 {
                     "id": 42,
                     "Title": "Software Engineering Manager",
-                    "Responsibilities": "Creating Value Stream Maps to identify waste and decrease development time by up to 20%. Train Engineering Teams on best cloud practices and architectural desicion making to decrease cloud spending , increase security posture and following general and specific best practices.",
+                    "Responsibilities": "Created Value Stream Maps to identify inefficiencies, reducing development time by up to 20%. Trained engineering teams on cloud best practices and architectural decision-making, resulting in reduced cloud expenses, improved security, and adherence to both general and specific best practices.",
                     "StartDate": "September 2022",
                     "EndDate": "November 2022"
                 },
                 {
                     "id": 41,
                     "Title": "Lead Consultant",
-                    "Responsibilities": "Wrote DO178C complaint Terraform IaC in AWS to for remote Pilots to communicate with unmanned aerial vehicles. Trained Engineering Team on Terraform industry best practices and CI/CD Implementations. Developed and implemented one-click IaC solution to accelerate cloud adoption by 50%. Wrote HIPPA compliant serverless Cloudformation IaC and business logic in Python for Healthcare customers to solve crossstate plan coverage.",
+                    "Responsibilities": "Designed DO-178C-compliant Terraform Infrastructure as Code (IaC) for remote pilots to interface with unmanned aerial vehicles. Trained the engineering team on Terraform best practices and CI/CD implementations. Developed a one-click IaC solution to accelerate cloud adoption by 50%. Built HIPAA-compliant serverless solutions using CloudFormation and Python for healthcare customers to streamline cross-state insurance plan coverage.",
                     "StartDate": "January 2021",
                     "EndDate": "September 2022"
                 }
@@ -36,14 +36,14 @@
                 {
                     "id": 31,
                     "Title": "SRE",
-                    "Responsibilities": "Build Serverless Application for Mortgage Brokers to submit Property Data for commercial real estate developments. Accelerated deal-closing time by 300%",
+                    "Responsibilities": "Developed a serverless application for mortgage brokers to submit property data for commercial real estate developments, accelerating deal closure times by 300%.",
                     "StartDate": "May 2020",
                     "EndDate": "December 2020"
                 },
                 {
                     "id": 32,
                     "Title": "DevOps Engineer",
-                    "Responsibilities": "Supporting, driving and reviewing Change Management and Implementation. Resolving Deployment issues in production on Windows Servers with Powershell.",
+                    "Responsibilities": "Managed and reviewed change management and implementation processes. Resolved deployment issues in production environments using PowerShell on Windows servers.",
                     "StartDate": "June 2018",
                     "EndDate": "May 2020"
                 }
@@ -57,7 +57,7 @@
                 {
                     "id": 21,
                     "Title": "SRE",
-                    "Responsibilities": "Maintained and improved HIPAA compliant AWS Software with focus on high availability, and self-healing rapid failover processes. Increased resiliency and overall operating model",
+                    "Responsibilities": "Maintained and enhanced HIPAA-compliant AWS infrastructure with a focus on high availability and self-healing failover mechanisms. Improved system resiliency and operational efficiency.",
                     "StartDate": "April 2017",
                     "EndDate": "April 2018"
                 }
@@ -71,7 +71,7 @@
                 {
                     "id": 11,
                     "Title": "DevOps Engineer",
-                    "Responsibilities": "Build 1-click CI/CD Pipeline allowing globally distributed Engineers to deploy changes reliable into Development environments including rollback strategies. Decreasing deployment time from 24hours to 20min.",
+                    "Responsibilities": "Built a one-click CI/CD pipeline, enabling globally distributed engineers to deploy reliable changes into development environments with rollback strategies. Reduced deployment times from 24 hours to 20 minutes.",
                     "StartDate": "December 2014",
                     "EndDate": "March 2017"
                 }
@@ -89,25 +89,25 @@
             }
         ],
         "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
-        "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following my military service, I pursued technical physics at Technische Universität Ilmenau, obtaining my Bachelors degree in 2011. While working at Siemens in Berlin, I commenced my Masters studies in electrical engineering at FernUniversität Hagen. Upon relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my Masters degree unfinished.",
+        "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following military service, I pursued a bachelor's degree in technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's degree in electrical engineering at FernUniversität Hagen. After relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my master's degree unfinished.",
         "pictures": [
             {
                 "id": "1",
                 "src": "https://media.404founders.com/martinfeineis/picture0.webp",
                 "isActive": true,
-                "altText": "Celebrating Open Source Techonolgy for Enterprise"
+                "altText": "Celebrating Open Source Technology for Enterprise"
             },
             {
                 "id": "2",
                 "src": "https://media.404founders.com/martinfeineis/picture1.webp",
                 "isActive": false,
-                "altText": "Bewerbungsfoto"
+                "altText": "Professional portrait photo"
             },
             {
                 "id": 3,
                 "src": "https://media.404founders.com/martinfeineis/picture2.webp",
                 "isActive": false,
-                "altText": "Professional picture from company conference"
+                "altText": "Professional picture from a company conference"
             }
         ]
     },
@@ -116,21 +116,21 @@
         "content": "Click on any picture to learn more.",
         "links": {},
         "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
-        "Description": "My experience with Java, Vue.JS, and Nuxt.JS demonstrates my proficiency in developing and deploying web applications, while my knowledge of Terraform and infrastructure as code showcases my ability to automate infrastructure provisioning and management. I am proficient in Cloud Service providers like AWS, Azure, GCP and Linode. Expert skills in Linux, PowerShell, and Python highlight my expertise in scripting and automation, as well as my ability to work with a variety of operating systems and platforms. Overall, I bring a broad range of skills and expertise to any project, with a focus on leveraging technology to streamline development, deployment, and operations processes",
+        "Description": "My experience with Java, Vue.js, and Nuxt.js demonstrates my proficiency in developing and deploying web applications. My expertise in Terraform and Infrastructure as Code highlights my ability to automate infrastructure provisioning and management. Proficiency in cloud service providers such as AWS, Azure, GCP, and Linode, coupled with advanced skills in Linux, PowerShell, and Python, underscores my versatility across platforms. I focus on leveraging technology to streamline development, deployment, and operational processes.",
         "techstack": {
             "Linux": {
                 "id": "t1",
                 "title": "Linux",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-                "desc": "The projects that are not mission critical run on my Linux server at home. Like PostgresQL, Plex or sometimes Minikube.",
+                "desc": "I run non-critical projects like PostgreSQL, Plex, or Minikube on my home Linux server.",
                 "links": [
                     {
                         "target": "https://martinfeineis.gitbook.io/newlib/operating-systems/linux/bash",
-                        "name": "bash"
+                        "name": "Bash Guide"
                     },
                     {
                         "target": "https://martinfeineis.gitbook.io/newlib/operating-systems/macosx",
-                        "name": "MacOSx"
+                        "name": "MacOS Tips"
                     }
                 ]
             },
@@ -138,15 +138,15 @@
                 "id": "t2",
                 "title": "AWS",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-                "desc": "I don&#39;t have enough money for my own datacenter, so everything I can&#39;t run on my home server I run in the cloud, like Lambda Functions API Gateways, DynamoDB Tables, VPCs, etc.",
+                "desc": "I manage infrastructure on AWS, including Lambda Functions, API Gateways, DynamoDB, and VPCs.",
                 "links": [
                     {
                         "target": "https://github.com/MartinFeineis",
-                        "name": "Github"
+                        "name": "GitHub Projects"
                     },
                     {
                         "target": "https://www.linkedin.com/in/martinfeineis/",
-                        "name": "LinkedIn"
+                        "name": "LinkedIn Profile"
                     }
                 ]
             },
@@ -154,11 +154,11 @@
                 "id": "t3",
                 "title": "Terraform",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
-                "desc": "I am using Terraform to deploy Infrastructure in AWS. My tf-state is stored in S3 and DynamoDB, and most stacks are comprised of hand written modules, some with cross account deployments from a singel Pipeline.",
+                "desc": "I use Terraform to deploy AWS infrastructure, storing state in S3 and DynamoDB. Many stacks include cross-account deployments via pipelines.",
                 "links": [
                     {
                         "target": "https://github.com/MartinFeineis/terraform",
-                        "name": "TF Playground"
+                        "name": "Terraform Playground"
                     }
                 ]
             },
@@ -166,7 +166,7 @@
                 "id": "t4",
                 "title": "Nuxt",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
-                "desc": "This Website was coded and with Vue and Nuxt.js. My Vercel playground contains some more frontend finger exercise I am dabbling with.",
+                "desc": "This website was developed using Vue.js and Nuxt.js. Additional projects are hosted on Vercel Playground.",
                 "links": [
                     {
                         "target": "https://www.rjo.me",
@@ -178,23 +178,23 @@
                 "id": "t5",
                 "title": "Python",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
-                "desc": "The backend of the contact me form is running on Python in AWS Lambda Functions.",
+                "desc": "The backend of my contact form runs on Python in AWS Lambda Functions.",
                 "links": [
                     {
                         "target": "https://martinfeineis.gitbook.io/newlib/languages/python",
-                        "name": "Tips &#39;n Tricks"
+                        "name": "Python Tips & Tricks"
                     }
                 ]
             },
-            "Ubuntu": {
+            "Git": {
                 "id": "t6",
                 "title": "Git",
                 "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
-                "desc": "I am using git to store and managed codebases. I worked with GitHub, AWS CodeCommit and Gitlab. I also used CI/CD Pipelines like Github actions, CircleCI and Jenkins.",
+                "desc": "I use Git for version control across GitHub, AWS CodeCommit, and GitLab, leveraging CI/CD pipelines like GitHub Actions and Jenkins.",
                 "links": [
                     {
                         "target": "https://github.com/MartinFeineis",
-                        "name": "Github"
+                        "name": "GitHub Repository"
                     }
                 ]
             }
