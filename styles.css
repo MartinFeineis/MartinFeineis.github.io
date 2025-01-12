@@ -31,17 +31,17 @@ body {
 
 .picture-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 266px));
     gap: 1.5rem;
     padding: 1rem;
     max-width: 800px;
     margin: 0 auto;
-    width: 100%;
+    justify-content: center;
 }
 
 .picture-gallery img {
     width: 100%;
-    max-width: 800px;
+    max-width: 266px;
     aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
