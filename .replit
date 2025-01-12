@@ -1,4 +1,8 @@
 modules = ["web"]
+run = "npx http-server -p 3000 --cors"
 
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npx http-server -p 3000 --cors"]
