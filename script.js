@@ -63,11 +63,13 @@ async function loadResume() {
         // Picture Gallery
         const gallery = document.createElement("div");
         gallery.classList.add("section");
-        gallery.innerHTML = `<h2>Picture Gallery</h2><div class="picture-gallery">`;
-        const activePictures = data.profile.pictures.filter(picture => picture.isActive);
-        gallery.innerHTML += activePictures.map(picture => `
-            <img class="gallery-img" src="${picture.src}" alt="${picture.altText}">
-        `).join("") + "</div>";
+        gallery.innerHTML = `
+            <h2>Picture Gallery</h2>
+            <div class="picture-gallery">${
+                activePictures.map(picture => `
+                    <img class="gallery-img" src="${picture.src}" alt="${picture.altText}">
+                `).join("")
+            }</div>`;
         resumeDiv.appendChild(gallery);
 
     } catch (error) {
