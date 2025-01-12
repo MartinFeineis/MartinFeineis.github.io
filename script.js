@@ -63,6 +63,7 @@ async function loadResume() {
         // Picture Gallery
         const gallery = document.createElement("div");
         gallery.classList.add("section");
+        const activePictures = data.profile.pictures.filter(picture => picture.isActive);
         gallery.innerHTML = `
             <h2>Picture Gallery</h2>
             <div class="picture-gallery">${
