@@ -63,15 +63,31 @@ async function loadResume() {
                         rows[Math.floor(index / 2)].push(skill);
                         return rows;
                     }, []).map(row => {
-                        const skills = row.map(skill => {
-                            const skillName = Object.keys(skill)[0];
-                            const rating = Object.values(skill)[0];
-                            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-                            return `
-                                <td class="skill-name">${skillName}</td>
-                                <td class="star-rating">${stars}</td>`;
-                        }).join('');
-                        return `<tr>${skills}</tr>`;
+                        let leftSkill = row[0];
+                        let rightSkill = row[1];
+                        const leftName = Object.keys(leftSkill)[0];
+                        const leftRating = Object.values(leftSkill)[0];
+                        const leftStars = '★'.repeat(leftRating) + '☆'.repeat(5 - leftRating);
+                        
+                        let rightContent = '';
+                        if (rightSkill) {
+                            const rightName = Object.keys(rightSkill)[0];
+                            const rightRating = Object.values(rightSkill)[0];
+                            const rightStars = '★'.repeat(rightRating) + '☆'.repeat(5 - rightRating);
+                            rightContent = `
+                                <td class="skill-name">${rightName}</td>
+                                <td class="star-rating">${rightStars}</td>`;
+                        } else {
+                            rightContent = `<td class="skill-name"></td><td class="star-rating"></td>`;
+                        }
+                        
+                        return `
+                            <tr>
+                                <td class="skill-name">${leftName}</td>
+                                <td class="star-rating">${leftStars}</td>
+                                <td class="divider"></td>
+                                ${rightContent}
+                            </tr>`;
                     }).join('')}
                 </tbody>
             </table>`;
