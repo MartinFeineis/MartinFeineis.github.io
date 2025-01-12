@@ -33,7 +33,7 @@ function createMessageSection() {
         e.preventDefault();
         const msgBody = {
             Sender: document.getElementById('sender').value,
-            Recipient: 'ich',
+            Recipient: 'Resume github page',
             Message: document.getElementById('message').value
         };
 
