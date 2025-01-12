@@ -58,15 +58,20 @@ async function loadResume() {
             <h2>Skills</h2>
             <table class="skills-table">
                 <tbody>
-                    ${data.Skills.map(skill => {
-                        const skillName = Object.keys(skill)[0];
-                        const rating = Object.values(skill)[0];
-                        const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-                        return `
-                            <tr>
+                    ${data.Skills.reduce((rows, skill, index) => {
+                        if (index % 2 === 0) rows.push([]);
+                        rows[Math.floor(index / 2)].push(skill);
+                        return rows;
+                    }, []).map(row => {
+                        const skills = row.map(skill => {
+                            const skillName = Object.keys(skill)[0];
+                            const rating = Object.values(skill)[0];
+                            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+                            return `
                                 <td class="skill-name">${skillName}</td>
-                                <td class="star-rating">${stars}</td>
-                            </tr>`;
+                                <td class="star-rating">${stars}</td>`;
+                        }).join('');
+                        return `<tr>${skills}</tr>`;
                     }).join('')}
                 </tbody>
             </table>`;
