@@ -22,35 +22,6 @@ async function loadResume() {
         `;
         resumeDiv.appendChild(header);
 
-        // User Links
-        if (data.profile.userlinks && data.profile.userlinks.length) {
-            const userLinks = document.createElement("div");
-            userLinks.classList.add("section");
-            userLinks.innerHTML = `<h2>Links</h2>`;
-            data.profile.userlinks.forEach(link => {
-                const [key, value] = Object.entries(link)[0];
-                userLinks.innerHTML += `<p><a href="${value}" target="_blank">${key}</a></p>`;
-            });
-            resumeDiv.appendChild(userLinks);
-        }
-
-        // Jobs
-        const jobs = document.createElement("div");
-        jobs.classList.add("section");
-        jobs.innerHTML = `<h2>Work Experience</h2>`;
-        data.jobs.forEach(job => {
-            jobs.innerHTML += `
-                <h3>${job.Company}</h3>
-                ${job.Positions.map(pos => `
-                    <div>
-                        <h4>${pos.Title} (${pos.StartDate} - ${pos.EndDate})</h4>
-                        <p>${pos.Responsibilities}</p>
-                    </div>
-                `).join("")}
-            `;
-        });
-        resumeDiv.appendChild(jobs);
-
         // Skills
         const skills = document.createElement("div");
         skills.classList.add("section");
@@ -93,6 +64,23 @@ async function loadResume() {
             </table>`;
         resumeDiv.appendChild(skills);
 
+        // Jobs
+        const jobs = document.createElement("div");
+        jobs.classList.add("section");
+        jobs.innerHTML = `<h2>Work Experience</h2>`;
+        data.jobs.forEach(job => {
+            jobs.innerHTML += `
+                <h3>${job.Company}</h3>
+                ${job.Positions.map(pos => `
+                    <div>
+                        <h4>${pos.Title} (${pos.StartDate} - ${pos.EndDate})</h4>
+                        <p>${pos.Responsibilities}</p>
+                    </div>
+                `).join("")}
+            `;
+        });
+        resumeDiv.appendChild(jobs);
+
         // Picture Gallery
         const gallery = document.createElement("div");
         gallery.classList.add("section");
@@ -104,6 +92,18 @@ async function loadResume() {
                 `).join("")
             }</div>`;
         resumeDiv.appendChild(gallery);
+
+        // User Links
+        if (data.profile.userlinks && data.profile.userlinks.length) {
+            const userLinks = document.createElement("div");
+            userLinks.classList.add("section");
+            userLinks.innerHTML = `<h2>Links</h2>`;
+            data.profile.userlinks.forEach(link => {
+                const [key, value] = Object.entries(link)[0];
+                userLinks.innerHTML += `<p><a href="${value}" target="_blank">${key}</a></p>`;
+            });
+            resumeDiv.appendChild(userLinks);
+        }
 
     } catch (error) {
         console.error("Error loading JSON:", error);
