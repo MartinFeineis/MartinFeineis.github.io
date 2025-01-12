@@ -1,9 +1,9 @@
 
-const jsonUrl = "https://media.404founders.com/martinfeineis/profile.json";
+const localUrl = "resume.json";
 
 async function loadResume() {
     try {
-        const response = await fetch(jsonUrl);
+        const response = await fetch(localUrl);
         const data = await response.json();
 
         const resumeDiv = document.getElementById("resume");
