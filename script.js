@@ -13,7 +13,7 @@ async function loadResume() {
         header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
             <div class="col-md-3">
-                <img src="${data.profile.image}" alt="Profile Picture" class="img-fluid rounded-circle profile-img">
+                <img src="${data.profile.pictures[0].src}" alt="${data.profile.pictures[0].altText}" class="img-fluid rounded-circle profile-img">
             </div>
             <div class="col-md-9">
                 <h1 class="mb-3">${data.profile.Name}</h1>
@@ -63,11 +63,11 @@ async function loadResume() {
         // Picture Gallery
         const gallery = document.createElement("div");
         gallery.classList.add("section");
-        gallery.innerHTML = `<h2>Picture Gallery</h2>`;
+        gallery.innerHTML = `<h2>Picture Gallery</h2><div class="picture-gallery">`;
         const activePictures = data.profile.pictures.filter(picture => picture.isActive);
         gallery.innerHTML += activePictures.map(picture => `
             <img src="${picture.src}" alt="${picture.altText}">
-        `).join("");
+        `).join("") + "</div>";
         resumeDiv.appendChild(gallery);
 
     } catch (error) {
