@@ -30,37 +30,22 @@ body {
 }
 
 .picture-gallery {
-    border: 5px solid darkred;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 266px));
-    gap: 1.5rem;
-    padding: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     max-width: 800px;
     margin: 0 auto;
-    justify-content: center;
-    width: 800px;
+    padding: 1rem;
 }
 
 .picture-gallery img {
-    border: 5px solid darkblue;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    page-break-inside: avoid;
-}
-
-.gallery-img {
-    border: 5px solid darkgoldenrod;
     width: 100%;
-    max-width: 800px;
+    height: auto;
     aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
-    page-break-inside: avoid;
 }
 
 @media print {
