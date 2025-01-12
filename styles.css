@@ -39,12 +39,6 @@ body {
     width: 100%;
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 .picture-gallery img {
     width: 100%;
     aspect-ratio: 4/3;
