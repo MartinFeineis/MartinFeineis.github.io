@@ -91,8 +91,59 @@ body {
 }
 
 @media print {
-    .picture-gallery img {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        font-size: 12pt;
+    }
+
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+        padding: 0;
         box-shadow: none;
+        border-radius: 0;
+    }
+
+    .section.picture-gallery {
+        display: none;
+    }
+
+    .profile-img {
+        max-width: 150px;
+        box-shadow: none;
+    }
+
+    .container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .star-rating {
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
     }
 }
 
