@@ -105,6 +105,9 @@ async function loadResume() {
             resumeDiv.appendChild(userLinks);
         }
 
+        // Add message section
+        resumeDiv.appendChild(createMessageSection());
+
     } catch (error) {
         console.error("Error loading JSON:", error);
         document.getElementById("resume").innerHTML = `<p>Error loading resume. Please try again later.</p>`;
