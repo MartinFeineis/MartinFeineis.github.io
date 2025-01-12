@@ -8,7 +8,7 @@
                 {
                     "id": 43,
                     "Title": "Technical Principal",
-                    "Responsibilities": "• Facilitated technical understanding and deliverables between clients and engineering teams. Ensured fulfillment of contractual obligations within agreed timelines and quality standards. Developed personalized training manuals for team-specific cases and mentored junior Technical Principals in client management. Led the development of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, optimizing cloud costs, enhancing security postures, and improving account architecture. \n • Built and trained a team to develop and maintain a highly available failover VDI environment for 8,000 stock traders.",
+                    "Responsibilities": "Facilitated technical understanding and deliverables between clients and engineering teams. Ensured fulfillment of contractual obligations within agreed timelines and quality standards. Developed personalized training manuals for team-specific cases and mentored junior Technical Principals in client management. Led the development of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, optimizing cloud costs, enhancing security postures, and improving account architecture. Built and trained a team to develop and maintain a highly available failover VDI environment for 8,000 stock traders.",
                     "StartDate": "October 2023",
                     "EndDate": "present"
                 },
