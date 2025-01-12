@@ -10,11 +10,15 @@ async function loadResume() {
 
         // Header
         const header = document.createElement("div");
-        header.classList.add("header");
+        header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
-            <img src="${data.profile.image}" alt="Profile Picture">
-            <h1>${data.profile.Name}</h1>
-            <p>${data.profile.Description}</p>
+            <div class="col-md-3">
+                <img src="${data.profile.image}" alt="Profile Picture" class="img-fluid rounded-circle profile-img">
+            </div>
+            <div class="col-md-9">
+                <h1 class="mb-3">${data.profile.Name}</h1>
+                <p class="lead">${data.profile.Description}</p>
+            </div>
         `;
         resumeDiv.appendChild(header);
 

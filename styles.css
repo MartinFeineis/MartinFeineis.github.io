@@ -2,32 +2,34 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
     background-color: #f4f4f4;
 }
+
 .resume-container {
     background: #fff;
-    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin: auto;
 }
-.header {
-    text-align: center;
+
+.profile-img {
+    max-width: 200px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.header img {
-    max-width: 100px;
-    border-radius: 50%;
-}
+
 .section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
 }
+
 .section h2 {
     border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
+
 .picture-gallery img {
     max-width: 100px;
     margin: 10px;
