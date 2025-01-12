@@ -66,9 +66,8 @@ async function loadResume() {
         const activePictures = data.profile.pictures.filter(picture => picture.isActive);
         gallery.innerHTML = `
             <h2>Picture Gallery</h2>
-            <div class="picture-gallery">${
-                activePictures.map(picture => `
-                    <img class="gallery-img" src="${picture.src}" alt="${picture.altText}">
+            <div class="picture-gallery">${activePictures.map(picture => `
+                    <img src="${picture.src}" alt="${picture.altText}">
                 `).join("")
             }</div>`;
         resumeDiv.appendChild(gallery);

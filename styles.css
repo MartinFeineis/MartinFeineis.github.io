@@ -43,8 +43,6 @@ body {
 
 .picture-gallery img {
     border: 5px solid darkblue;
-    width: 800px;
-    max-width: 800px;
     aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
