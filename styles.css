@@ -64,13 +64,24 @@ body {
     page-break-inside: avoid;
 }
 
+.skills-table {
+    width: 100%;
+    border-spacing: 0 8px;
+}
+
+.skills-table td {
+    padding: 8px 0;
+}
+
+.skill-name {
+    font-weight: 500;
+    width: 40%;
+}
+
 .star-rating {
     color: #ffd700;
     font-size: 1.2rem;
-}
-
-.star-rating .star-empty {
-    color: #ddd;
+    text-align: left;
 }
 
 @media print {

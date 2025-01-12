@@ -54,13 +54,22 @@ async function loadResume() {
         // Skills
         const skills = document.createElement("div");
         skills.classList.add("section");
-        skills.innerHTML = `<h2>Skills</h2>`;
-        data.Skills.forEach(skill => {
-            const skillName = Object.keys(skill)[0];
-            const rating = Object.values(skill)[0];
-            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
-            skills.innerHTML += `<p>${skillName} <span class="star-rating">${stars}</span> - ${skill.category}</p>`;
-        });
+        skills.innerHTML = `
+            <h2>Skills</h2>
+            <table class="skills-table">
+                <tbody>
+                    ${data.Skills.map(skill => {
+                        const skillName = Object.keys(skill)[0];
+                        const rating = Object.values(skill)[0];
+                        const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+                        return `
+                            <tr>
+                                <td class="skill-name">${skillName}</td>
+                                <td class="star-rating">${stars}</td>
+                            </tr>`;
+                    }).join('')}
+                </tbody>
+            </table>`;
         resumeDiv.appendChild(skills);
 
         // Picture Gallery
