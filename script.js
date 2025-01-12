@@ -82,16 +82,16 @@ async function loadResume() {
         resumeDiv.appendChild(jobs);
 
         // Picture Gallery
-        const gallery = document.createElement("div");
-        gallery.classList.add("section");
-        const activePictures = data.profile.pictures.filter(picture => picture.isActive);
-        gallery.innerHTML = `
-            <h2>Picture Gallery</h2>
-            <div class="picture-gallery">${activePictures.map(picture => `
-                    <img src="${picture.src}" alt="${picture.altText}">
-                `).join("")
-            }</div>`;
-        resumeDiv.appendChild(gallery);
+        // const gallery = document.createElement("div");
+        // gallery.classList.add("section");
+        // const activePictures = data.profile.pictures.filter(picture => picture.isActive);
+        // gallery.innerHTML = `
+        //     <h2>Picture Gallery</h2>
+        //     <div class="picture-gallery">${activePictures.map(picture => `
+        //             <img src="${picture.src}" alt="${picture.altText}">
+        //         `).join("")
+        //     }</div>`;
+        // resumeDiv.appendChild(gallery);
 
         // User Links
         if (data.profile.userlinks && data.profile.userlinks.length) {
