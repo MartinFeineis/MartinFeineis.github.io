@@ -32,18 +32,18 @@ body {
 .picture-gallery {
     border: 5px solid darkred;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 266px));
     gap: 1.5rem;
     padding: 1rem;
     max-width: 800px;
     margin: 0 auto;
+    justify-content: center;
     width: 800px;
 }
 
 .picture-gallery img {
-    border: 5px solid darkblue;
-    width: 800px;
     max-width: 800px;
+    border: 5px solid darkblue;
     aspect-ratio: 4/3;
     object-fit: cover;
     border-radius: 8px;
@@ -64,20 +64,88 @@ body {
     page-break-inside: avoid;
 }
 
+.skills-table {
+    width: 100%;
+    border-spacing: 0 8px;
+}
+
+.skills-table td {
+    padding: 8px 0;
+}
+
+.skill-name {
+    font-weight: 500;
+    width: 15%;
+    padding-right: 20px;
+}
+
+.divider {
+    width: 2%;
+    background-color: #eee;
+}
+
+.star-rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
 @media print {
-    .picture-gallery img {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        font-size: 12pt;
+    }
+
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .section.picture-gallery {
+        display: none;
+    }
+
+    .profile-img {
+        max-width: 150px;
         box-shadow: none;
     }
-}
 
-@media (max-width: 768px) {
-    .picture-gallery {
-        grid-template-columns: repeat(2, 1fr);
+    .container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0;
     }
-}
 
-@media (max-width: 480px) {
-    .picture-gallery {
-        grid-template-columns: 1fr;
+    .star-rating {
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        page-break-after: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
     }
 }
