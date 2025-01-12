@@ -64,6 +64,15 @@ body {
     page-break-inside: avoid;
 }
 
+.star-rating {
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.star-rating .star-empty {
+    color: #ddd;
+}
+
 @media print {
     .picture-gallery img {
         box-shadow: none;

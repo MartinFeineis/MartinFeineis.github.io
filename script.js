@@ -56,7 +56,10 @@ async function loadResume() {
         skills.classList.add("section");
         skills.innerHTML = `<h2>Skills</h2>`;
         data.Skills.forEach(skill => {
-            skills.innerHTML += `<p>${Object.keys(skill)[0]} (${Object.values(skill)[0]}/5) - ${skill.category}</p>`;
+            const skillName = Object.keys(skill)[0];
+            const rating = Object.values(skill)[0];
+            const stars = '★'.repeat(rating) + '☆'.repeat(5 - rating);
+            skills.innerHTML += `<p>${skillName} <span class="star-rating">${stars}</span> - ${skill.category}</p>`;
         });
         resumeDiv.appendChild(skills);
 
