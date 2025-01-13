@@ -89,6 +89,9 @@
             },
             {
                 "Github": "https://github.com/MartinFeineis"
+            },
+            {
+                "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],
         "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
