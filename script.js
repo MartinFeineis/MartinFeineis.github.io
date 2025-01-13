@@ -74,7 +74,9 @@ async function loadResume() {
                 ${job.Positions.map(pos => `
                     <div>
                         <h4>${pos.Title} (${pos.StartDate} - ${pos.EndDate})</h4>
-                        <p>${pos.Responsibilities}</p>
+                        <ul>
+                            ${pos.Responsibilities.map(resp => `<li>${resp}</li>`).join('')}
+                        </ul>
                     </div>
                 `).join("")}
             `;
