@@ -8,21 +8,21 @@
                 {
                     "id": 43,
                     "Title": "Technical Principal",
-                    "Responsibilities": "Facilitated technical understanding and deliverables between clients and engineering teams. Ensured fulfillment of contractual obligations within agreed timelines and quality standards. Developed personalized training manuals for team-specific cases and mentored junior Technical Principals in client management. Led the development of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, optimizing cloud costs, enhancing security postures, and improving account architecture. Built and trained a team to develop and maintain a highly available failover VDI environment for 8,000 stock traders.",
+                    "Responsibilities": ["Led the creation of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, achieving cost optimization, enhanced security, and improved account architecture", "Built and trained a team to deliver a highly available failover VDI environment supporting 8,000 stock traders.", "Authored custom training manuals and mentored junior Technical Principals on client management and technical solutions.", "Ensured seamless delivery of technical commitments within set timelines and quality standards."],
                     "StartDate": "October 2023",
                     "EndDate": "present"
                 },
                 {
                     "id": 42,
                     "Title": "Software Engineering Manager",
-                    "Responsibilities": "Created Value Stream Maps to identify inefficiencies, reducing development time by up to 20%. Trained engineering teams on cloud best practices and architectural decision-making, resulting in reduced cloud expenses, improved security, and adherence to both general and specific best practices.",
+                    "Responsibilities": ["Created Value Stream Maps to identify and address inefficiencies, reducing development time by up to 20%.", "Trained engineering teams on cloud best practices, resulting in reduced expenses, improved security, and adherence to architectural standards."],
                     "StartDate": "September 2022",
                     "EndDate": "November 2022"
                 },
                 {
                     "id": 41,
                     "Title": "Lead Consultant",
-                    "Responsibilities": "Designed DO-178C-compliant Terraform Infrastructure as Code (IaC) for remote pilots to interface with unmanned aerial vehicles. Trained the engineering team on Terraform best practices and CI/CD implementations. Developed a one-click IaC solution to accelerate cloud adoption by 50%. Built HIPAA-compliant serverless solutions using CloudFormation and Python for healthcare customers to streamline cross-state insurance plan coverage.",
+                    "Responsibilities": ["Designed DO-178C-compliant Terraform IaC solutions for remote piloting of unmanned aerial vehicles.", "Developed a one-click IaC solution, accelerating cloud adoption by 50%.  ", "Built HIPAA-compliant serverless solutions for healthcare clients, streamlining cross-state insurance plan coverage."],
                     "StartDate": "January 2021",
                     "EndDate": "September 2022"
                 }
@@ -36,14 +36,14 @@
                 {
                     "id": 31,
                     "Title": "SRE",
-                    "Responsibilities": "Developed a serverless application for mortgage brokers to submit property data for commercial real estate developments, accelerating deal closure times by 300%.",
+                    "Responsibilities": ["Developed a serverless application enabling mortgage brokers to submit property data, reducing deal closure times by 300%."],
                     "StartDate": "May 2020",
                     "EndDate": "December 2020"
                 },
                 {
                     "id": 32,
                     "Title": "DevOps Engineer",
-                    "Responsibilities": "Managed and reviewed change management and implementation processes. Resolved deployment issues in production environments using PowerShell on Windows servers.",
+                    "Responsibilities": ["Oversaw change management processes and resolved deployment issues in production environments using PowerShell on Windows servers."],
                     "StartDate": "June 2018",
                     "EndDate": "May 2020"
                 }
@@ -57,7 +57,7 @@
                 {
                     "id": 21,
                     "Title": "SRE",
-                    "Responsibilities": "Maintained and enhanced HIPAA-compliant AWS infrastructure with a focus on high availability and self-healing failover mechanisms. Improved system resiliency and operational efficiency.",
+                    "Responsibilities": ["Enhanced HIPAA-compliant AWS infrastructure with high availability and self-healing failover mechanisms, improving system resiliency and operational efficiency.  "],
                     "StartDate": "April 2017",
                     "EndDate": "April 2018"
                 }
@@ -71,7 +71,7 @@
                 {
                     "id": 11,
                     "Title": "DevOps Engineer",
-                    "Responsibilities": "Built a one-click CI/CD pipeline, enabling globally distributed engineers to deploy reliable changes into development environments with rollback strategies. Reduced deployment times from 24 hours to 20 minutes.",
+                    "Responsibilities": ["Designed and implemented a one-click CI/CD pipeline, reducing deployment times from 24 hours to 20 minutes."],
                     "StartDate": "December 2014",
                     "EndDate": "March 2017"
                 }
@@ -86,15 +86,9 @@
             },
             {
                 "XING": "https://www.xing.com/profile/Martin_Feineis/"
-            },
-            {
-                "Github": "https://github.com/MartinFeineis"
-            },
-            {
-                "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],
-        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
+        "KeyAchievments": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
         "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following military service, I pursued a bachelor's degree in technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's degree in electrical engineering at FernUniversität Hagen. After relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my master's degree unfinished.",
         "pictures": [
             {
@@ -222,4 +216,3 @@
         { "Ansible": 2, "category": "Languages - Frameworks" }
     ]
 }
-
