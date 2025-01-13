@@ -81,6 +81,23 @@ async function loadResume() {
         });
         resumeDiv.appendChild(jobs);
 
+        // Tech Stack
+        const techStack = document.createElement("div");
+        techStack.classList.add("section");
+        techStack.innerHTML = `
+            <h2>Technologies</h2>
+            <div class="tech-grid">
+                ${Object.entries(data.TechIcons.techstack).map(([key, tech]) => `
+                    <div class="tech-item">
+                        <img src="${tech.bgimg}" alt="${tech.title}" class="tech-icon">
+                        <h4>${tech.title}</h4>
+                        <p>${tech.desc}</p>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+        resumeDiv.appendChild(techStack);
+
         // Picture Gallery
         // const gallery = document.createElement("div");
         // gallery.classList.add("section");
