@@ -86,6 +86,12 @@
             },
             {
                 "XING": "https://www.xing.com/profile/Martin_Feineis/"
+            },
+            {
+                "Github": "https://github.com/MartinFeineis"
+            },
+            {
+                "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],
         "KeyAchievments": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
