@@ -94,7 +94,8 @@ tr {
 .skill-name {
     font-weight: 500;
     width: 12%;
-    padding-right: 15px;
+    padding-right: 25px;
+    padding-left: 12%;
 }
 
 .divider {
