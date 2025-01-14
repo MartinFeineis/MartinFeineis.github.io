@@ -2,27 +2,23 @@
 const fs = require('fs');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
+const path = require('path');
 
 async function buildStaticPage() {
-  // Read resume data
+  // Read resume data from src folder
   const resumeData = JSON.parse(fs.readFileSync('src/resume.json', 'utf8'));
   
-  // Read template
-  let template = fs.readFileSync('index.html', 'utf8');
+  // Read template from src folder
+  let template = fs.readFileSync('src/index.html', 'utf8');
   
   // Create a virtual DOM environment
   const dom = new JSDOM(template);
   global.window = dom.window;
   global.document = dom.window.document;
   
-  // Load Bootstrap's classes
-  const bootstrapScript = document.createElement('script');
-  bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
-  document.body.appendChild(bootstrapScript);
-  
-  // Execute message.js and script.js in the virtual DOM
-  const messageJs = fs.readFileSync('message.js', 'utf8');
-  const scriptJs = fs.readFileSync('script.js', 'utf8');
+  // Read source files from src folder
+  const messageJs = fs.readFileSync('src/message.js', 'utf8');
+  const scriptJs = fs.readFileSync('src/script.js', 'utf8');
   
   // Add resume data to HTML
   const resumeDataScript = dom.window.document.createElement('script');
@@ -31,36 +27,32 @@ async function buildStaticPage() {
   resumeDataScript.textContent = JSON.stringify(resumeData);
   dom.window.document.head.appendChild(resumeDataScript);
   
-  // Evaluate message.js first to define createMessageSection
-  dom.window.eval(messageJs);
-
-  // Then evaluate script.js which uses createMessageSection
-  dom.window.eval(scriptJs);
-
-  // Add scripts to the document for the static build
+  // Create and execute scripts in the virtual DOM
   const messageScript = dom.window.document.createElement('script');
   messageScript.textContent = messageJs;
+  dom.window.eval(messageJs); // Execute message.js first
   dom.window.document.body.appendChild(messageScript);
 
   const mainScript = dom.window.document.createElement('script');
   mainScript.textContent = scriptJs;
+  dom.window.eval(scriptJs); // Then execute script.js
   dom.window.document.body.appendChild(mainScript);
   
-  // Wait for the resume to load
+  // Wait for the resume to load and any dynamic content to be generated
   await new Promise(resolve => setTimeout(resolve, 1000));
   
-  // Get the final HTML
+  // Get the final HTML with all dynamic content
   const finalHtml = dom.serialize();
   
-  // Write to docs directory
+  // Ensure docs directory exists
   if (!fs.existsSync('docs')) {
     fs.mkdirSync('docs');
   }
-  fs.writeFileSync('docs/index.html', finalHtml);
   
-  // Copy other assets
-  fs.copyFileSync('styles.css', 'docs/styles.css');
-  fs.copyFileSync('message.js', 'docs/message.js');
+  // Write files to docs directory
+  fs.writeFileSync('docs/index.html', finalHtml);
+  fs.copyFileSync('src/styles.css', 'docs/styles.css');
+  fs.copyFileSync('src/message.js', 'docs/message.js');
   fs.copyFileSync('src/resume.json', 'docs/resume.json');
 }
 
