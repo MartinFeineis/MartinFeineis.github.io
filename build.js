@@ -1,5 +1,7 @@
 
 const fs = require('fs');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
 
 async function buildStaticPage() {
   // Read resume data
@@ -8,17 +10,35 @@ async function buildStaticPage() {
   // Read template
   let template = fs.readFileSync('index.html', 'utf8');
   
-  // Insert the resume data directly into the template
-  const staticHtml = template.replace(
-    '<div id="resume"></div>', 
-    `<div id="resume">${generateResumeHtml(resumeData)}</div>`
-  );
+  // Create a virtual DOM environment
+  const dom = new JSDOM(template);
+  global.window = dom.window;
+  global.document = dom.window.document;
+  
+  // Load Bootstrap's classes
+  const bootstrapScript = document.createElement('script');
+  bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
+  document.body.appendChild(bootstrapScript);
+  
+  // Execute message.js and script.js in the virtual DOM
+  const messageJs = fs.readFileSync('message.js', 'utf8');
+  const scriptJs = fs.readFileSync('script.js', 'utf8');
+  
+  // Create and execute scripts in virtual DOM
+  const messageScript = dom.window.eval(messageJs);
+  const mainScript = dom.window.eval(scriptJs);
+  
+  // Wait for the resume to load
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  
+  // Get the final HTML
+  const finalHtml = dom.serialize();
   
   // Write to dist directory
   if (!fs.existsSync('dist')) {
     fs.mkdirSync('dist');
   }
-  fs.writeFileSync('dist/index.html', staticHtml);
+  fs.writeFileSync('dist/index.html', finalHtml);
   
   // Copy other assets
   fs.copyFileSync('styles.css', 'dist/styles.css');
@@ -26,14 +46,4 @@ async function buildStaticPage() {
   fs.copyFileSync('resume.json', 'dist/resume.json');
 }
 
-function generateResumeHtml(data) {
-  // Generate the same HTML structure as your dynamic script.js
-  return `
-    <div class="header row align-items-center mb-4">
-      <!-- Your existing HTML structure here -->
-    </div>
-    <!-- Rest of your resume sections -->
-  `;
-}
-
-buildStaticPage();
+buildStaticPage().catch(console.error);
