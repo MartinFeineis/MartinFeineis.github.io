@@ -31,9 +31,18 @@ async function buildStaticPage() {
   resumeDataScript.textContent = JSON.stringify(resumeData);
   dom.window.document.head.appendChild(resumeDataScript);
   
-  // Create and execute scripts in virtual DOM
-  const messageScript = dom.window.eval(messageJs);
-  const mainScript = dom.window.eval(scriptJs);
+  // Create script elements and add them to DOM in correct order
+  const messageScript = dom.window.document.createElement('script');
+  messageScript.textContent = messageJs;
+  dom.window.document.body.appendChild(messageScript);
+
+  const mainScript = dom.window.document.createElement('script');
+  mainScript.textContent = scriptJs;
+  dom.window.document.body.appendChild(mainScript);
+
+  // Execute the scripts
+  dom.window.eval(messageJs);
+  dom.window.eval(scriptJs);
   
   // Wait for the resume to load
   await new Promise(resolve => setTimeout(resolve, 1000));
