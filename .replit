@@ -7,3 +7,7 @@ channel = "stable-24_05"
 [deployment]
 deploymentTarget = "static"
 publicDir = "/"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
