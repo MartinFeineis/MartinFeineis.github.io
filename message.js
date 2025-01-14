@@ -56,6 +56,3 @@ window.createMessageSection = function createMessageSection() {
 
     return contact;
 }
-
-// Export the function for use in script.js
-window.createMessageSection = createMessageSection;
