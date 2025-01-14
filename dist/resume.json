@@ -1,0 +1,224 @@
+{
+    "jobs": [
+        {
+            "id": 4,
+            "Company": "Cognizant",
+            "selectStr": "Cognizant",
+            "Positions": [
+                {
+                    "id": 43,
+                    "Title": "Technical Principal",
+                    "Responsibilities": ["Led the creation of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, achieving cost optimization, enhanced security, and improved account architecture", "Built and trained a team to deliver a highly available failover VDI environment supporting 8,000 stock traders.", "Authored custom training manuals and mentored junior Technical Principals on client management and technical solutions.", "Ensured seamless delivery of technical commitments within set timelines and quality standards."],
+                    "StartDate": "October 2023",
+                    "EndDate": "present"
+                },
+                {
+                    "id": 42,
+                    "Title": "Software Engineering Manager",
+                    "Responsibilities": ["Created Value Stream Maps to identify and address inefficiencies, reducing development time by up to 20%.", "Trained engineering teams on cloud best practices, resulting in reduced expenses, improved security, and adherence to architectural standards."],
+                    "StartDate": "September 2022",
+                    "EndDate": "November 2022"
+                },
+                {
+                    "id": 41,
+                    "Title": "Lead Consultant",
+                    "Responsibilities": ["Designed DO-178C-compliant Terraform IaC solutions for remote piloting of unmanned aerial vehicles.", "Developed a one-click IaC solution, accelerating cloud adoption by 50%.  ", "Built HIPAA-compliant serverless solutions for healthcare clients, streamlining cross-state insurance plan coverage."],
+                    "StartDate": "January 2021",
+                    "EndDate": "September 2022"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "Company": "Berkadia",
+            "selectStr": "Berkadia",
+            "Positions": [
+                {
+                    "id": 31,
+                    "Title": "SRE",
+                    "Responsibilities": ["Developed a serverless application enabling mortgage brokers to submit property data, reducing deal closure times by 300%."],
+                    "StartDate": "May 2020",
+                    "EndDate": "December 2020"
+                },
+                {
+                    "id": 32,
+                    "Title": "DevOps Engineer",
+                    "Responsibilities": ["Oversaw change management processes and resolved deployment issues in production environments using PowerShell on Windows servers."],
+                    "StartDate": "June 2018",
+                    "EndDate": "May 2020"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "Company": "Cloudmine",
+            "selectStr": "Cloudmine",
+            "Positions": [
+                {
+                    "id": 21,
+                    "Title": "SRE",
+                    "Responsibilities": ["Enhanced HIPAA-compliant AWS infrastructure with high availability and self-healing failover mechanisms, improving system resiliency and operational efficiency.  "],
+                    "StartDate": "April 2017",
+                    "EndDate": "April 2018"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "Company": "PointIO",
+            "selectStr": "PointIO",
+            "Positions": [
+                {
+                    "id": 11,
+                    "Title": "DevOps Engineer",
+                    "Responsibilities": ["Designed and implemented a one-click CI/CD pipeline, reducing deployment times from 24 hours to 20 minutes."],
+                    "StartDate": "December 2014",
+                    "EndDate": "March 2017"
+                }
+            ]
+        }
+    ],
+    "profile": {
+        "Name": "Martin Feineis",
+        "userlinks": [
+            {
+                "LinkedIn": "https://www.linkedin.com/in/martinfeineis/"
+            },
+            {
+                "XING": "https://www.xing.com/profile/Martin_Feineis/"
+            },
+            {
+                "Github": "https://github.com/MartinFeineis"
+            },
+            {
+                "Gitbooks": "https://lib.rjo.me/newlib"
+            }
+        ],
+        "KeyAchievments": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
+        "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following military service, I pursued a bachelor's degree in technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's degree in electrical engineering at FernUniversität Hagen. After relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my master's degree unfinished.",
+        "pictures": [
+            {
+                "id": "1",
+                "src": "https://media.404founders.com/martinfeineis/picture0.webp",
+                "isActive": true,
+                "altText": "Celebrating Open Source Technology for Enterprise"
+            },
+            {
+                "id": "2",
+                "src": "https://media.404founders.com/martinfeineis/picture1.webp",
+                "isActive": false,
+                "altText": "Professional portrait photo"
+            },
+            {
+                "id": 3,
+                "src": "https://media.404founders.com/martinfeineis/picture2.webp",
+                "isActive": false,
+                "altText": "Professional picture from a company conference"
+            }
+        ]
+    },
+    "TechIcons": {
+        "Name": "Martin Feineis",
+        "content": "Click on any picture to learn more.",
+        "links": {},
+        "image": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ceylon/ceylon-original.svg",
+        "Description": "My experience with Java, Vue.js, and Nuxt.js demonstrates my proficiency in developing and deploying web applications. My expertise in Terraform and Infrastructure as Code highlights my ability to automate infrastructure provisioning and management. Proficiency in cloud service providers such as AWS, Azure, GCP, and Linode, coupled with advanced skills in Linux, PowerShell, and Python, underscores my versatility across platforms. I focus on leveraging technology to streamline development, deployment, and operational processes.",
+        "techstack": {
+            "Linux": {
+                "id": "t1",
+                "title": "Linux",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+                "desc": "I run non-critical projects like PostgreSQL, Plex, or Minikube on my home Linux server.",
+                "links": [
+                    {
+                        "target": "https://martinfeineis.gitbook.io/newlib/operating-systems/linux/bash",
+                        "name": "Bash Guide"
+                    },
+                    {
+                        "target": "https://martinfeineis.gitbook.io/newlib/operating-systems/macosx",
+                        "name": "MacOS Tips"
+                    }
+                ]
+            },
+            "AWS": {
+                "id": "t2",
+                "title": "AWS",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+                "desc": "I manage infrastructure on AWS, including Lambda Functions, API Gateways, DynamoDB, and VPCs.",
+                "links": [
+                    {
+                        "target": "https://github.com/MartinFeineis",
+                        "name": "GitHub Projects"
+                    },
+                    {
+                        "target": "https://www.linkedin.com/in/martinfeineis/",
+                        "name": "LinkedIn Profile"
+                    }
+                ]
+            },
+            "Terraform": {
+                "id": "t3",
+                "title": "Terraform",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original-wordmark.svg",
+                "desc": "I use Terraform to deploy AWS infrastructure, storing state in S3 and DynamoDB. Many stacks include cross-account deployments via pipelines.",
+                "links": [
+                    {
+                        "target": "https://github.com/MartinFeineis/terraform",
+                        "name": "Terraform Playground"
+                    }
+                ]
+            },
+            "Nuxt": {
+                "id": "t4",
+                "title": "Nuxt",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original-wordmark.svg",
+                "desc": "This website was developed using Vue.js and Nuxt.js. Additional projects are hosted on Vercel Playground.",
+                "links": [
+                    {
+                        "target": "https://www.rjo.me",
+                        "name": "Vercel Playground"
+                    }
+                ]
+            },
+            "Python": {
+                "id": "t5",
+                "title": "Python",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg",
+                "desc": "The backend of my contact form runs on Python in AWS Lambda Functions.",
+                "links": [
+                    {
+                        "target": "https://martinfeineis.gitbook.io/newlib/languages/python",
+                        "name": "Python Tips & Tricks"
+                    }
+                ]
+            },
+            "Git": {
+                "id": "t6",
+                "title": "Git",
+                "bgimg": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
+                "desc": "I use Git for version control across GitHub, AWS CodeCommit, and GitLab, leveraging CI/CD pipelines like GitHub Actions and Jenkins.",
+                "links": [
+                    {
+                        "target": "https://github.com/MartinFeineis",
+                        "name": "GitHub Repository"
+                    }
+                ]
+            }
+        }
+    },
+    "Skills": [
+        { "Linux": 5, "category": "OS & Container Technologies" },
+        { "AWS": 5, "category": "Amazon Web Services" },
+        { "Python": 4, "category": "Languages - Frameworks" },
+        { "Terraform": 4, "category": "Cloud & Virtual Technologies" },
+        { "Git": 4, "category": "Languages - Frameworks" },
+        { "Docker": 3, "category": "OS & Container Technologies" },
+        { "Kubernetes": 3, "category": "OS & Container Technologies" },
+        { "MongoDB": 3, "category": "Databases" },
+        { "Postgres": 3, "category": "Databases" },
+        { "DynamoDB": 3, "category": "Databases" },
+        { "Nuxt": 3, "category": "Languages - Frameworks" },
+        { "GCP": 2, "category": "Cloud & Virtual Technologies" },
+        { "Ansible": 2, "category": "Languages - Frameworks" }
+    ]
+}
