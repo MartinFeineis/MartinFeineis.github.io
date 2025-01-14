@@ -31,7 +31,13 @@ async function buildStaticPage() {
   resumeDataScript.textContent = JSON.stringify(resumeData);
   dom.window.document.head.appendChild(resumeDataScript);
   
-  // Create script elements and add them to DOM in correct order
+  // Evaluate message.js first to define createMessageSection
+  dom.window.eval(messageJs);
+
+  // Then evaluate script.js which uses createMessageSection
+  dom.window.eval(scriptJs);
+
+  // Add scripts to the document for the static build
   const messageScript = dom.window.document.createElement('script');
   messageScript.textContent = messageJs;
   dom.window.document.body.appendChild(messageScript);
@@ -39,10 +45,6 @@ async function buildStaticPage() {
   const mainScript = dom.window.document.createElement('script');
   mainScript.textContent = scriptJs;
   dom.window.document.body.appendChild(mainScript);
-
-  // Execute the scripts
-  dom.window.eval(messageJs);
-  dom.window.eval(scriptJs);
   
   // Wait for the resume to load
   await new Promise(resolve => setTimeout(resolve, 1000));
