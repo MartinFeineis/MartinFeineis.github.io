@@ -5,7 +5,7 @@ const { JSDOM } = jsdom;
 
 async function buildStaticPage() {
   // Read resume data
-  const resumeData = JSON.parse(fs.readFileSync('resume.json', 'utf8'));
+  const resumeData = JSON.parse(fs.readFileSync('src/resume.json', 'utf8'));
   
   // Read template
   let template = fs.readFileSync('index.html', 'utf8');
@@ -50,7 +50,7 @@ async function buildStaticPage() {
   // Copy other assets
   fs.copyFileSync('styles.css', 'docs/styles.css');
   fs.copyFileSync('message.js', 'docs/message.js');
-  fs.copyFileSync('resume.json', 'docs/resume.json');
+  fs.copyFileSync('src/resume.json', 'docs/resume.json');
 }
 
 buildStaticPage().catch(console.error);
