@@ -1,10 +1,7 @@
 
-const localUrl = "resume.json";
-
 async function loadResume() {
     try {
-        const response = await fetch(localUrl);
-        const data = await response.json();
+        const data = window.resumeData;
 
         const resumeDiv = document.getElementById("resume");
 

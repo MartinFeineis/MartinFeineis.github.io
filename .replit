@@ -1,4 +1,4 @@
-modules = ["web"]
+modules = ["nodejs-20", "web"]
 run = "npx http-server -p 3000 --cors"
 
 [nix]
@@ -7,3 +7,7 @@ channel = "stable-24_05"
 [deployment]
 deploymentTarget = "static"
 publicDir = "/"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
