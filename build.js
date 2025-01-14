@@ -37,16 +37,16 @@ async function buildStaticPage() {
   // Get the final HTML
   const finalHtml = dom.serialize();
   
-  // Write to dist directory
-  if (!fs.existsSync('dist')) {
-    fs.mkdirSync('dist');
+  // Write to docs directory
+  if (!fs.existsSync('docs')) {
+    fs.mkdirSync('docs');
   }
-  fs.writeFileSync('dist/index.html', finalHtml);
+  fs.writeFileSync('docs/index.html', finalHtml);
   
   // Copy other assets
-  fs.copyFileSync('styles.css', 'dist/styles.css');
-  fs.copyFileSync('message.js', 'dist/message.js');
-  fs.copyFileSync('resume.json', 'dist/resume.json');
+  fs.copyFileSync('styles.css', 'docs/styles.css');
+  fs.copyFileSync('message.js', 'docs/message.js');
+  fs.copyFileSync('resume.json', 'docs/resume.json');
 }
 
 buildStaticPage().catch(console.error);
