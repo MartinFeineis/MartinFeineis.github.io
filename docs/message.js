@@ -57,5 +57,10 @@ function createMessageSection() {
     return contact;
 }
 
-// Export the function for use in script.js
-window.createMessageSection = createMessageSection;
+// Create and append message section when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    const resume = document.getElementById('resume');
+    if (resume) {
+        resume.appendChild(createMessageSection());
+    }
+});

@@ -1,7 +1,7 @@
 
 async function loadResume() {
     try {
-        const data = window.resumeData;
+        const data = JSON.parse(document.getElementById('resumeData').textContent);
 
         const resumeDiv = document.getElementById("resume");
 
