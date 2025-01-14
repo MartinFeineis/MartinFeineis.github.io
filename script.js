@@ -1,7 +1,10 @@
 
+const localUrl = "resume.json";
+
 async function loadResume() {
     try {
-        const data = JSON.parse(document.getElementById('resumeData').textContent);
+        const response = await fetch(localUrl);
+        const data = await response.json();
 
         const resumeDiv = document.getElementById("resume");
 
