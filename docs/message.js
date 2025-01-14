@@ -1,6 +1,6 @@
 
 // Message handling functionality
-function createMessageSection() {
+window.createMessageSection = function createMessageSection() {
     const contact = document.createElement("div");
     contact.classList.add("section");
     contact.innerHTML = `
@@ -56,11 +56,3 @@ function createMessageSection() {
 
     return contact;
 }
-
-// Create and append message section when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const resume = document.getElementById('resume');
-    if (resume) {
-        resume.appendChild(createMessageSection());
-    }
-});
