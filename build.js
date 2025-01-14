@@ -24,6 +24,9 @@ async function buildStaticPage() {
   const messageJs = fs.readFileSync('message.js', 'utf8');
   const scriptJs = fs.readFileSync('script.js', 'utf8');
   
+  // Inject resume data into window object
+  dom.window.resumeData = resumeData;
+  
   // Create and execute scripts in virtual DOM
   const messageScript = dom.window.eval(messageJs);
   const mainScript = dom.window.eval(scriptJs);
