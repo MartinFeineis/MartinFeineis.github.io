@@ -8,7 +8,7 @@
                 {
                     "id": 43,
                     "Title": "Technical Principal",
-                    "Responsibilities": ["Led the creation of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, achieving cost optimization, enhanced security, and improved account architecture", "Built and trained a team to deliver a highly available failover VDI environment supporting 8,000 stock traders.", "Authored custom training manuals and mentored junior Technical Principals on client management and technical solutions.", "Ensured seamless delivery of technical commitments within set timelines and quality standards."],
+                    "Responsibilities": ["Led the creation of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, achieving cost optimization, enhanced security, and improved AWS Organizations architecture. Built customized and opinionated Terraform modules that can be reused as blueprints for new modules.", "Built and trained a team to deliver a highly available failover VDI environment supporting 8,000 stock traders.", "Authored custom training manuals and mentored junior Technical Principals on client management and technical solutions.", "Ensured seamless delivery of technical commitments within set timelines and quality standards."],
                     "StartDate": "October 2023",
                     "EndDate": "present"
                 },
