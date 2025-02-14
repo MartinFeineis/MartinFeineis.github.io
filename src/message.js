@@ -1,58 +1,47 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const messageForm = document.getElementById('messageForm');
+    const messageStatus = document.getElementById('messageStatus');
+    const sentMessageId = document.getElementById('sentMessageId');
 
-// Message handling functionality
-window.createMessageSection = function createMessageSection() {
-    const contact = document.createElement("div");
-    contact.classList.add("section");
-    contact.innerHTML = `
-        <h2>Contact</h2>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-expanded="false">
-            Contact Me
-        </button>
-        <div class="collapse mt-3" id="contactForm">
-            <div class="card card-body">
-                <form id="messageForm">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">From:</span>
-                        <input type="text" id="sender" class="form-control" placeholder="Your name" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Message:</span>
-                        <textarea id="message" class="form-control" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                <div id="messageStatus" class="mt-3" style="display: none;">
-                    <p>Your message ID: <span id="sentMessageId"></span></p>
-                </div>
-            </div>
-        </div>
-    `;
+    if (messageForm) {
+        messageForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission
 
-    // Handle form submission
-    contact.querySelector('#messageForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const msgBody = {
-            Sender: document.getElementById('sender').value,
-            Recipient: 'Resume github page',
-            Message: document.getElementById('message').value
-        };
+            const sender = document.getElementById('sender').value;
+            const message = document.getElementById('message').value;
 
-        try {
-            const res = await fetch('https://api.404founders.com/send', {
-                method: 'POST',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify(msgBody)
-            });
-            const data = await res.json();
-            document.getElementById('sentMessageId').textContent = data.MsgId;
-            document.getElementById('messageStatus').style.display = 'block';
-            document.getElementById('messageForm').reset();
-        } catch (error) {
-            console.error('Error sending message:', error);
-        }
-    });
+            if (!sender || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
 
-    return contact;
-}
+            const msgBody = {
+                Sender: sender,
+                Recipient: 'Resume GitHub Page',
+                Message: message
+            };
+
+            try {
+                const res = await fetch('https://api.404founders.com/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-type': 'application/json'
+                    },
+                    body: JSON.stringify(msgBody)
+                });
+
+                if (!res.ok) {
+                    throw new Error(`Error: ${res.statusText}`);
+                }
+
+                const data = await res.json();
+                sentMessageId.textContent = data.MsgId;
+                messageStatus.style.display = 'block';
+                messageForm.reset();
+            } catch (error) {
+                console.error('Error sending message:', error);
+                alert('There was an error sending your message. Please try again later.');
+            }
+        });
+    }
+});

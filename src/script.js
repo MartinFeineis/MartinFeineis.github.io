@@ -1,11 +1,9 @@
-
 async function loadResume() {
     try {
         const data = JSON.parse(document.getElementById('resumeData').textContent);
-
         const resumeDiv = document.getElementById("resume");
 
-        // Header
+        // Header Section
         const header = document.createElement("div");
         header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
@@ -17,15 +15,13 @@ async function loadResume() {
                 <p class="lead">${data.profile.Description}</p>
                 <h3 class="mt-4">Key Achievements</h3>
                 <ul class="achievements-list">
-                    ${data.profile.KeyAchievments.map(achievement => `
-                        <li>${achievement}</li>
-                    `).join('')}
+                    ${data.profile.KeyAchievments.map(achievement => `<li>${achievement}</li>`).join('')}
                 </ul>
             </div>
         `;
         resumeDiv.appendChild(header);
 
-        // Skills
+        // Skills Section
         const skills = document.createElement("div");
         skills.classList.add("section");
         skills.innerHTML = `
@@ -33,41 +29,41 @@ async function loadResume() {
             <table class="skills-table">
                 <tbody>
                     ${data.Skills.reduce((rows, skill, index) => {
-            if (index % 2 === 0) rows.push([]);
-            rows[Math.floor(index / 2)].push(skill);
-            return rows;
-        }, []).map(row => {
-            let leftSkill = row[0];
-            let rightSkill = row[1];
-            const leftName = Object.keys(leftSkill)[0];
-            const leftRating = Object.values(leftSkill)[0];
-            const leftStars = '★'.repeat(leftRating) + '☆'.repeat(5 - leftRating);
+                        if (index % 2 === 0) rows.push([]);
+                        rows[Math.floor(index / 2)].push(skill);
+                        return rows;
+                    }, []).map(row => {
+                        let leftSkill = row[0];
+                        let rightSkill = row[1];
+                        const leftName = Object.keys(leftSkill)[0];
+                        const leftRating = Object.values(leftSkill)[0];
+                        const leftStars = '★'.repeat(leftRating) + '☆'.repeat(5 - leftRating);
 
-            let rightContent = '';
-            if (rightSkill) {
-                const rightName = Object.keys(rightSkill)[0];
-                const rightRating = Object.values(rightSkill)[0];
-                const rightStars = '★'.repeat(rightRating) + '☆'.repeat(5 - rightRating);
-                rightContent = `
+                        let rightContent = '';
+                        if (rightSkill) {
+                            const rightName = Object.keys(rightSkill)[0];
+                            const rightRating = Object.values(rightSkill)[0];
+                            const rightStars = '★'.repeat(rightRating) + '☆'.repeat(5 - rightRating);
+                            rightContent = `
                                 <td class="skill-name">${rightName}</td>
                                 <td class="star-rating">${rightStars}</td>`;
-            } else {
-                rightContent = `<td class="skill-name"></td><td class="star-rating"></td>`;
-            }
+                        } else {
+                            rightContent = `<td class="skill-name"></td><td class="star-rating"></td>`;
+                        }
 
-            return `
+                        return `
                             <tr>
                                 <td class="skill-name">${leftName}</td>
                                 <td class="star-rating">${leftStars}</td>
                                 <td class="divider"></td>
                                 ${rightContent}
                             </tr>`;
-        }).join('')}
+                    }).join('')}
                 </tbody>
             </table>`;
         resumeDiv.appendChild(skills);
 
-        // Jobs
+        // Jobs Section
         const jobs = document.createElement("div");
         jobs.classList.add("section");
         jobs.innerHTML = `<h2>Work Experience</h2>`;
@@ -86,50 +82,33 @@ async function loadResume() {
         });
         resumeDiv.appendChild(jobs);
 
-        // Tech Stack
-        const techStack = document.createElement("div");
-        techStack.classList.add("section");
-        techStack.innerHTML = `
-            <h2>Technologies</h2>
-            <div class="tech-grid">
-                ${Object.entries(data.TechIcons.techstack).map(([key, tech]) => `
-                    <div class="tech-item">
-                        <img src="${tech.bgimg}" alt="${tech.title}" class="tech-icon">
-                        <h4>${tech.title}</h4>
-                        <p>${tech.desc}</p>
+        // Contact Form Section
+        const contactSection = document.createElement("div");
+        contactSection.classList.add("section");
+        contactSection.innerHTML = `
+            <h2>Contact</h2>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-expanded="false">
+                Contact Me
+            </button>
+            <div class="collapse mt-3" id="contactForm">
+                <div class="card card-body">
+                    <form id="messageForm">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">From:</span>
+                            <input type="text" id="sender" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Message:</span>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <div id="messageStatus" class="mt-3" style="display: none;">
+                        <p>Your message ID: <span id="sentMessageId"></span></p>
                     </div>
-                `).join('')}
-            </div>
-        `;
-        resumeDiv.appendChild(techStack);
-
-        // Picture Gallery
-        // const gallery = document.createElement("div");
-        // gallery.classList.add("section");
-        // const activePictures = data.profile.pictures.filter(picture => picture.isActive);
-        // gallery.innerHTML = `
-        //     <h2>Picture Gallery</h2>
-        //     <div class="picture-gallery">${activePictures.map(picture => `
-        //             <img src="${picture.src}" alt="${picture.altText}">
-        //         `).join("")
-        //     }</div>`;
-        // resumeDiv.appendChild(gallery);
-
-        // User Links
-        if (data.profile.userlinks && data.profile.userlinks.length) {
-            const userLinks = document.createElement("div");
-            userLinks.classList.add("section");
-            userLinks.innerHTML = `<h2>Links</h2>`;
-            data.profile.userlinks.forEach(link => {
-                const [key, value] = Object.entries(link)[0];
-                userLinks.innerHTML += `<p><a href="${value}" target="_blank">${key}</a></p>`;
-            });
-            resumeDiv.appendChild(userLinks);
-        }
-
-        // Add message section
-        resumeDiv.appendChild(createMessageSection());
-
+                </div>
+            </div>`;
+        resumeDiv.appendChild(contactSection);
     } catch (error) {
         console.error("Error loading JSON:", error);
         document.getElementById("resume").innerHTML = `<p>Error loading resume. Please try again later.</p>`;
