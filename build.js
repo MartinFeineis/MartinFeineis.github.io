@@ -1,56 +1,65 @@
-
 const fs = require('fs');
+const path = require('path');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 
-async function buildStaticPage() {
-  // Read resume data
-  const resumeData = JSON.parse(fs.readFileSync('resume.json', 'utf8'));
-  
-  // Read template
-  let template = fs.readFileSync('index.html', 'utf8');
-  
-  // Create a virtual DOM environment
-  const dom = new JSDOM(template);
-  global.window = dom.window;
-  global.document = dom.window.document;
-  
-  // Load Bootstrap's classes
-  const bootstrapScript = document.createElement('script');
-  bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js';
-  document.body.appendChild(bootstrapScript);
-  
-  // Execute message.js and script.js in the virtual DOM
-  const messageJs = fs.readFileSync('message.js', 'utf8');
-  const scriptJs = fs.readFileSync('script.js', 'utf8');
-  
-  // Add resume data to HTML
-  const resumeDataScript = dom.window.document.createElement('script');
-  resumeDataScript.id = 'resumeData';
-  resumeDataScript.type = 'application/json';
-  resumeDataScript.textContent = JSON.stringify(resumeData);
-  dom.window.document.head.appendChild(resumeDataScript);
-  
-  // Create and execute scripts in virtual DOM
-  const messageScript = dom.window.eval(messageJs);
-  const mainScript = dom.window.eval(scriptJs);
-  
-  // Wait for the resume to load
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  // Get the final HTML
-  const finalHtml = dom.serialize();
-  
-  // Write to docs directory
-  if (!fs.existsSync('docs')) {
-    fs.mkdirSync('docs');
-  }
-  fs.writeFileSync('docs/index.html', finalHtml);
-  
-  // Copy other assets
-  fs.copyFileSync('styles.css', 'docs/styles.css');
-  fs.copyFileSync('message.js', 'docs/message.js');
-  fs.copyFileSync('resume.json', 'docs/resume.json');
-}
+(async () => {
+    try {
+        // Paths to files
+        const htmlFilePath = path.resolve(__dirname, 'src', 'index.html');
+        const scriptFilePath = path.resolve(__dirname, 'src', 'script.js');
+        const resumeFilePath = path.resolve(__dirname, 'src', 'resume.json');
+        const distPath = path.resolve(__dirname, 'dist');
 
-buildStaticPage().catch(console.error);
+        // Read the files
+        const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
+        const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
+        const resumeContent = fs.readFileSync(resumeFilePath, 'utf8');
+
+        // Initialize jsdom with the HTML content
+        const dom = new JSDOM(htmlContent, {
+            runScripts: 'dangerously',
+            resources: 'usable',
+        });
+
+        // Attach the resume JSON data to the DOM
+        const scriptEl = dom.window.document.createElement('script');
+        scriptEl.id = 'resumeData';
+        scriptEl.type = 'application/json';
+        scriptEl.textContent = resumeContent;
+        dom.window.document.body.appendChild(scriptEl);
+
+        // Attach and execute script.js (to render content dynamically)
+        const scriptEl2 = dom.window.document.createElement('script');
+        scriptEl2.textContent = scriptContent;
+        dom.window.document.body.appendChild(scriptEl2);
+
+        // Reference message.js in the output HTML for dynamic functionality
+        const messageScript = dom.window.document.createElement('script');
+        messageScript.src = 'message.js'; // Include message.js as an external script
+        dom.window.document.body.appendChild(messageScript);
+
+        // Wait for rendering to complete
+        await new Promise((resolve) => {
+            dom.window.addEventListener('load', () => {
+                setTimeout(resolve, 500);
+            });
+        });
+
+        // Save the final HTML to the dist directory
+        if (!fs.existsSync(distPath)) {
+            fs.mkdirSync(distPath, { recursive: true });
+        }
+
+        const outputFilePath = path.resolve(distPath, 'index.html');
+        fs.writeFileSync(outputFilePath, dom.serialize());
+        console.log(`Static HTML file created at: ${outputFilePath}`);
+
+        // Copy message.js to the dist directory
+        const messageFilePath = path.resolve(__dirname, 'src', 'message.js');
+        fs.copyFileSync(messageFilePath, path.resolve(distPath, 'message.js'));
+        console.log('message.js copied to the dist directory.');
+    } catch (error) {
+        console.error('Error during build:', error);
+    }
+})();
