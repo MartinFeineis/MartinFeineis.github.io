@@ -23,6 +23,18 @@ const { JSDOM } = jsdom;
         });
 
         // Header Section
+        const cssFilePath = path.resolve(__dirname, 'src', 'styles.css');
+
+        if (fs.existsSync(cssFilePath)) {
+            const cssContent = fs.readFileSync(cssFilePath, 'utf8');
+
+            // Create a <style> tag and add the CSS content
+            const styleEl = dom.window.document.createElement('style');
+            styleEl.textContent = cssContent;
+            dom.window.document.head.appendChild(styleEl);
+
+            console.log('CSS styles embedded into the HTML head.');
+        }
         const header = dom.window.document.createElement("div");
         header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
