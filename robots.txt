@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Disallow: /drafts/
+Disallow: /test/
+
+Sitemap: https://martin.rjo.me/
+
