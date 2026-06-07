@@ -7,13 +7,12 @@ const { JSDOM } = jsdom;
     try {
         // Paths to files
         const htmlFilePath = path.resolve(__dirname, 'src', 'index.html');
-        const scriptFilePath = path.resolve(__dirname, 'src', 'script.js');
         const resumeFilePath = path.resolve(__dirname, 'src', 'resume.json');
         const distPath = path.resolve(__dirname, 'dist');
+        const cssFilePath = path.resolve(__dirname, 'src', 'styles.css');
 
         // Read the files
         const htmlContent = fs.readFileSync(htmlFilePath, 'utf8');
-        const scriptContent = fs.readFileSync(scriptFilePath, 'utf8');
         const data = JSON.parse(fs.readFileSync(resumeFilePath, 'utf8'));
 
         // Initialize jsdom with the HTML content
@@ -23,7 +22,7 @@ const { JSDOM } = jsdom;
         });
 
         // Header Section
-        const cssFilePath = path.resolve(__dirname, 'src', 'styles.css');
+        
 
         if (fs.existsSync(cssFilePath)) {
             const cssContent = fs.readFileSync(cssFilePath, 'utf8');
@@ -142,9 +141,17 @@ const { JSDOM } = jsdom;
         dom.window.document.body.appendChild(contactSection);
 
         // Reference message.js in the output HTML for dynamic functionality
-        const messageScript = dom.window.document.createElement('script');
-        messageScript.src = 'message.js'; // Include message.js as an external script
-        dom.window.document.body.appendChild(messageScript);
+        const messageFilePath = path.resolve(__dirname, 'src', 'message.js');
+
+        if (fs.existsSync(messageFilePath)) {
+            const messageScriptContent = fs.readFileSync(messageFilePath, 'utf8');
+        
+            // Create a <script> tag and embed the JS content
+            const messageScript = dom.window.document.createElement('script');
+            messageScript.textContent = messageScriptContent;
+            dom.window.document.body.appendChild(messageScript);
+            console.log('message.js embedded inline into the HTML.');
+        }
 
         // Wait for rendering to complete
         await new Promise((resolve) => {
@@ -161,11 +168,6 @@ const { JSDOM } = jsdom;
         const outputFilePath = path.resolve(distPath, 'index.html');
         fs.writeFileSync(outputFilePath, dom.serialize());
         console.log(`Static HTML file created at: ${outputFilePath}`);
-
-        // Copy message.js to the dist directory
-        const messageFilePath = path.resolve(__dirname, 'src', 'message.js');
-        fs.copyFileSync(messageFilePath, path.resolve(distPath, 'message.js'));
-        console.log('message.js copied to the dist directory.');
     } catch (error) {
         console.error('Error during build:', error);
     }

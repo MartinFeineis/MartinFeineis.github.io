@@ -1,58 +1,63 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const messageForm = document.getElementById('messageForm');
+    const messageStatus = document.getElementById('messageStatus');
+    const sentMessageId = document.getElementById('sentMessageId');
 
-// Message handling functionality
-window.createMessageSection = function createMessageSection() {
-    const contact = document.createElement("div");
-    contact.classList.add("section");
-    contact.innerHTML = `
-        <h2>Contact</h2>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-expanded="false">
-            Contact Me
-        </button>
-        <div class="collapse mt-3" id="contactForm">
-            <div class="card card-body">
-                <form id="messageForm">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">From:</span>
-                        <input type="text" id="sender" class="form-control" placeholder="Your name" required>
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Message:</span>
-                        <textarea id="message" class="form-control" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                <div id="messageStatus" class="mt-3" style="display: none;">
-                    <p>Your message ID: <span id="sentMessageId"></span></p>
-                </div>
-            </div>
-        </div>
-    `;
+    if (!messageForm) return; // Exit if the form is missing
 
-    // Handle form submission
-    contact.querySelector('#messageForm').addEventListener('submit', async (e) => {
-        e.preventDefault();
+    messageForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        const senderInput = document.getElementById('sender');
+        const messageInput = document.getElementById('message');
+
+        if (!senderInput || !messageInput) {
+            console.error('Form elements are missing.');
+            return;
+        }
+
+        const sender = senderInput.value.trim();
+        const message = messageInput.value.trim();
+
+        if (!sender || !message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
         const msgBody = {
-            Sender: document.getElementById('sender').value,
-            Recipient: 'Resume github page',
-            Message: document.getElementById('message').value
+            Sender: sender,
+            Recipient: 'Resume GitHub Page',
+            Message: message
         };
 
         try {
             const res = await fetch('https://api.404founders.com/send', {
                 method: 'POST',
-                headers: {
-                    'Content-type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(msgBody)
             });
-            const data = await res.json();
-            document.getElementById('sentMessageId').textContent = data.MsgId;
-            document.getElementById('messageStatus').style.display = 'block';
-            document.getElementById('messageForm').reset();
+
+            if (!res.ok) {
+                throw new Error(`Error ${res.status}: ${res.statusText}`);
+            }
+
+            let data;
+            try {
+                data = await res.json(); // Try parsing response
+            } catch (parseError) {
+                throw new Error('Failed to parse server response.');
+            }
+
+            if (data?.MsgId) {
+                sentMessageId.textContent = data.MsgId;
+                messageStatus.style.display = 'block';
+                messageForm.reset();
+            } else {
+                throw new Error('Invalid response format.');
+            }
         } catch (error) {
             console.error('Error sending message:', error);
+            alert('Computer says NO!');
         }
     });
-
-    return contact;
-}
+});
