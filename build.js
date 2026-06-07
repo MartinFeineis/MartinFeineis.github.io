@@ -8,7 +8,7 @@ const { JSDOM } = jsdom;
         // Paths to files
         const htmlFilePath = path.resolve(__dirname, 'src', 'index.html');
         const resumeFilePath = path.resolve(__dirname, 'src', 'resume.json');
-        const distPath = path.resolve(__dirname, 'dist');
+        const outDir = __dirname; // GitHub Pages serves from the repo root
         const cssFilePath = path.resolve(__dirname, 'src', 'styles.css');
 
         // Read the files
@@ -160,12 +160,8 @@ const { JSDOM } = jsdom;
             });
         });
 
-        // Save the final HTML to the dist directory
-        if (!fs.existsSync(distPath)) {
-            fs.mkdirSync(distPath, { recursive: true });
-        }
-
-        const outputFilePath = path.resolve(distPath, 'index.html');
+        // Save the final HTML directly to the repo root (no manual copy step)
+        const outputFilePath = path.resolve(outDir, 'index.html');
         fs.writeFileSync(outputFilePath, dom.serialize());
         console.log(`Static HTML file created at: ${outputFilePath}`);
     } catch (error) {
