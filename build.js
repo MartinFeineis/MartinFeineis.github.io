@@ -45,7 +45,7 @@ const { JSDOM } = jsdom;
                 <p class="lead">${data.profile.Description}</p>
                 <h3 class="mt-4">Key Achievements</h3>
                 <ul class="achievements-list">
-                    ${data.profile.KeyAchievments.map(achievement => `<li>${achievement}</li>`).join('')}
+                    ${data.profile.KeyAchievements.map(achievement => `<li>${achievement}</li>`).join('')}
                 </ul>
             </div>
         `;

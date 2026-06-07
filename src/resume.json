@@ -8,7 +8,7 @@
                 {
                     "id": 44,
                     "Title": "Sr. Consulting Manager",
-                    "Responsibilities": ["Led team of Consultants to build Executive support tools and proactive AI drive monitoring solutions.", "Identified git branching failures, designed and led training sessions to DevOps teams."],
+                    "Responsibilities": ["Led team of Consultants to build Executive support tools and proactive AI drive monitoring solutions.", "Identified git branching failures, designed and led training sessions to DevOps teams.","Implemented AI driven workflows."],
                     "StartDate": "April 2025",
                     "EndDate": "present"
                 },
@@ -101,7 +101,7 @@
                 "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],
-        "KeyAchievments": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
+        "KeyAchievements": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
         "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following military service, I pursued a bachelor's degree in technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's degree in electrical engineering at FernUniversität Hagen. After relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my master's degree unfinished.",
         "pictures": [
             {
