@@ -22,3 +22,12 @@ logs
 !.env.example
 
 *.swp
+
+
+
+# ---------------------------
+# BMad generated working files
+# ---------------------------
+_bmad/
+_bmad-output/
+.claude/
