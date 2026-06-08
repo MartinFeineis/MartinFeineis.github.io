@@ -24,15 +24,10 @@ const { JSDOM } = jsdom;
         // Header Section
         
 
+        // Publish the stylesheet next to the output HTML; index.html links it via <link>
         if (fs.existsSync(cssFilePath)) {
-            const cssContent = fs.readFileSync(cssFilePath, 'utf8');
-
-            // Create a <style> tag and add the CSS content
-            const styleEl = dom.window.document.createElement('style');
-            styleEl.textContent = cssContent;
-            dom.window.document.head.appendChild(styleEl);
-
-            console.log('CSS styles embedded into the HTML head.');
+            fs.copyFileSync(cssFilePath, path.resolve(outDir, 'styles.css'));
+            console.log('styles.css copied to the output root.');
         }
 
         // All résumé sections render into the #resume container (Bootstrap .container)
