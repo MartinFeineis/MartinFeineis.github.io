@@ -55,10 +55,12 @@ body {
 .skills-table {
     width: 100%;
     border-spacing: 0 8px;
+    table-layout: fixed;
 }
 
 .skills-table td {
     padding: 4px 0;
+    vertical-align: middle;
 }
 
 .skills-table tr {
@@ -67,20 +69,20 @@ body {
 
 .skill-name {
     font-weight: 500;
-    width: 12%;
-    padding-right: 25px;
-    padding-left: 12%;
-}
-
-.divider {
-    width: 2%;
-    background-color: var(--border);
+    width: 27%;
+    padding-left: 1.25rem; /* gutter after the divider for the right column */
 }
 
 .star-rating {
     color: var(--star);
     font-size: 1.2rem;
-    text-align: left;
+    width: 20%;
+    padding-right: 1.25rem; /* gutter before the divider for the left column */
+}
+
+.divider {
+    width: 2px;
+    background-color: var(--border);
 }
 
 /* Tech stack */

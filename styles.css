@@ -54,7 +54,7 @@ body {
 /* Skills */
 .skills-table {
     width: 100%;
-    border-spacing: 0 8px;
+    border-spacing: 0 10em 10em 10em;
 }
 
 .skills-table td {
