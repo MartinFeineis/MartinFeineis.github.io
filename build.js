@@ -112,6 +112,14 @@ const { JSDOM } = jsdom;
         });
         dom.window.document.body.appendChild(jobs);
 
+        // About Me Section
+        const about = dom.window.document.createElement("div");
+        about.classList.add("section");
+        about.innerHTML = `
+            <h2>About Me</h2>
+            <p>${data.profile.AboutMe}</p>`;
+        dom.window.document.body.appendChild(about);
+
         // Contact Form Section
         const contactSection = dom.window.document.createElement("div");
         contactSection.classList.add("section");

@@ -8,28 +8,28 @@
                 {
                     "id": 44,
                     "Title": "Sr. Consulting Manager",
-                    "Responsibilities": ["Led team of Consultants to build Executive support tools and proactive AI drive monitoring solutions.", "Identified git branching failures, designed and led training sessions to DevOps teams.","Implemented AI driven workflows."],
-                    "StartDate": "April 2025",
+                    "Responsibilities": ["Led a team of consultants building executive-support tools and proactive, AI-driven monitoring solutions.", "Diagnosed recurring Git branching failures and designed and led training sessions for DevOps teams.", "Introduced AI-driven workflows that produced higher-quality documentation—cutting filler and improving readability—driving better understanding and stronger adoption across engineering teams."],
+                    "StartDate": "March 2025",
                     "EndDate": "present"
                 },
                 {
                     "id": 43,
                     "Title": "Technical Principal",
-                    "Responsibilities": ["Led the creation of a Cloud Center of Excellence (CCoE) based on the AWS Well-Architected Framework, achieving cost optimization, enhanced security, and improved AWS Organizations architecture. Built customized and opinionated Terraform modules that can be reused as blueprints for new modules.", "Built and trained a team to deliver a highly available failover VDI environment supporting 8,000 stock traders.", "Authored custom training manuals and mentored junior Technical Principals on client management and technical solutions.", "Ensured seamless delivery of technical commitments within set timelines and quality standards."],
+                    "Responsibilities": ["Established a Cloud Center of Excellence (CCoE) on the AWS Well-Architected Framework, driving cost optimization, stronger security, and a cleaner AWS Organizations architecture.", "Built opinionated, reusable Terraform modules adopted as blueprints across new projects.", "Built and led a team that delivered a highly available failover VDI environment for 8,000 stock traders.", "Mentored junior Technical Principals and authored training materials on client management and technical delivery."],
                     "StartDate": "October 2023",
                     "EndDate": "March 2025"
                 },
                 {
                     "id": 42,
                     "Title": "Software Engineering Manager",
-                    "Responsibilities": ["Created Value Stream Maps to identify and address inefficiencies, reducing development time by up to 20%.", "Trained engineering teams on cloud best practices, resulting in reduced expenses, improved security, and adherence to architectural standards."],
+                    "Responsibilities": ["Used Value Stream Mapping to remove delivery bottlenecks, cutting development time by 20%.", "Trained engineering teams on cloud best practices, reducing costs and improving security and architectural compliance."],
                     "StartDate": "September 2022",
-                    "EndDate": "November 2022"
+                    "EndDate": "October 2023"
                 },
                 {
                     "id": 41,
                     "Title": "Lead Consultant",
-                    "Responsibilities": ["Designed DO-178C-compliant Terraform IaC solutions for remote piloting of unmanned aerial vehicles.", "Developed a one-click IaC solution, accelerating cloud adoption by 50%.  ", "Built HIPAA-compliant serverless solutions for healthcare clients, streamlining cross-state insurance plan coverage."],
+                    "Responsibilities": ["Designed DO-178C-compliant Terraform IaC solutions for remote piloting of unmanned aerial vehicles.", "Developed a one-click IaC solution that accelerated cloud adoption by 50%.", "Built HIPAA-compliant serverless solutions for healthcare clients, streamlining cross-state insurance plan coverage."],
                     "StartDate": "January 2021",
                     "EndDate": "September 2022"
                 }
@@ -43,7 +43,7 @@
                 {
                     "id": 31,
                     "Title": "SRE",
-                    "Responsibilities": ["Developed a serverless application enabling mortgage brokers to submit property data, reducing deal closure times by 300%."],
+                    "Responsibilities": ["Developed a serverless application enabling mortgage brokers to submit property data, making deal closures 3 times faster."],
                     "StartDate": "May 2020",
                     "EndDate": "December 2020"
                 },
@@ -64,7 +64,7 @@
                 {
                     "id": 21,
                     "Title": "SRE",
-                    "Responsibilities": ["Enhanced HIPAA-compliant AWS infrastructure with high availability and self-healing failover mechanisms, improving system resiliency and operational efficiency.  "],
+                    "Responsibilities": ["Enhanced HIPAA-compliant AWS infrastructure with high availability and self-healing failover mechanisms, improving system resiliency and operational efficiency."],
                     "StartDate": "April 2017",
                     "EndDate": "April 2018"
                 }
@@ -101,8 +101,9 @@
                 "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],
-        "KeyAchievements": ["Reduced deployment times by 95% through CI/CD pipeline innovation at PointIO.","Increased process efficiency by 50% via one-click IaC solutions at Cognizant.","Spearheaded the development of a mission-critical failover VDI environment for 8,000 traders."],
-        "Description": "I grew up in Waldbüttelbrunn and attended Deutschhaus Gymnasium in Würzburg, where I earned my Abitur in 2006. Following military service, I pursued a bachelor's degree in technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's degree in electrical engineering at FernUniversität Hagen. After relocating to the United States in 2014, I transitioned into software engineering in Philadelphia, leaving my master's degree unfinished.",
+        "KeyAchievements": ["Cut deployment time from 24 hours to 20 minutes with a one-click CI/CD pipeline at PointIO.","Accelerated cloud adoption by 50% with a one-click IaC solution at Cognizant.","Led delivery of a mission-critical failover VDI environment for 8,000 traders.","Established a Cloud Center of Excellence adopted across the organization."],
+        "Description": "Engineering leader with 10+ years across cloud, DevOps, and SRE—now leading consulting teams and AI-driven engineering initiatives at Cognizant. Track record of standing up Cloud Centers of Excellence, delivering mission-critical platforms at scale (including a failover VDI environment for 8,000 traders), and mentoring engineers and Technical Principals. I turn business objectives into resilient, cost-optimized platforms and high-performing teams.",
+        "AboutMe": "I grew up in Waldbüttelbrunn, Germany, and earned my Abitur at Deutschhaus Gymnasium in Würzburg in 2006. After military service, I studied technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's in electrical engineering at FernUniversität Hagen. In 2014 I relocated to the United States and moved into software engineering in Philadelphia, where I've built my career ever since—growing from hands-on DevOps and SRE work into technical leadership.",
         "pictures": [
             {
                 "id": "1",
