@@ -55,7 +55,6 @@ body {
 .skills-table {
     width: 100%;
     border-spacing: 0 8px;
-    table-layout: fixed;
 }
 
 .skills-table td {
@@ -69,20 +68,30 @@ body {
 
 .skill-name {
     font-weight: 500;
-    width: 27%;
-    padding-left: 1.25rem; /* gutter after the divider for the right column */
+    width: 30%;
+    padding-right: 1rem; /* space between a skill name and its stars */
 }
 
 .star-rating {
     color: var(--star);
     font-size: 1.2rem;
-    width: 20%;
-    padding-right: 1.25rem; /* gutter before the divider for the left column */
+    width: 18%;
 }
 
+/* Thin divider line (a border, so it can't balloon) */
 .divider {
-    width: 2px;
-    background-color: var(--border);
+    width: 0;
+    padding: 0;
+    border-left: 2px solid var(--border);
+}
+
+/* Equal breathing room on each side of the divider */
+.skills-table td:nth-child(2) {
+    padding-right: 2rem;
+}
+
+.skills-table td:nth-child(4) {
+    padding-left: 2rem;
 }
 
 /* Tech stack */
