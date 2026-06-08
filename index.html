@@ -181,6 +181,12 @@ tr {
         display: none;
     }
 
+    /* Hide interactive / supplementary sections from the printed/PDF résumé */
+    .contact-section,
+    .tech-stack-section {
+        display: none !important;
+    }
+
     .profile-img {
         max-width: 150px;
         box-shadow: none;
@@ -201,10 +207,26 @@ tr {
         color: black;
     }
 
-    a[href]:after {
+    /* Only spell out URLs for the social/profile links, not every link */
+    .profile-links a[href]:after {
         content: " (" attr(href) ")";
         font-size: 10pt;
         font-style: italic;
+    }
+
+    /* Render the header social buttons as plain text on paper */
+    .profile-links .btn {
+        border: none;
+        padding: 0;
+        margin: 0 1rem 0 0;
+        color: black;
+        font-size: 12pt;
+    }
+
+    /* Keep each tech card intact across page breaks */
+    .tech-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     h1,
@@ -304,7 +326,7 @@ tr {
                                 <td class="skill-name"></td><td class="star-rating"></td>
                             </tr>
                 </tbody>
-            </table></div><div class="section">
+            </table></div><div class="section tech-stack-section">
             <h2>Tech Stack</h2>
             <p>My experience with Java, Vue.js, and Nuxt.js demonstrates my proficiency in developing and deploying web applications. My expertise in Terraform and Infrastructure as Code highlights my ability to automate infrastructure provisioning and management. Proficiency in cloud service providers such as AWS, Azure, GCP, and Linode, coupled with advanced skills in Linux, PowerShell, and Python, underscores my versatility across platforms. I focus on leveraging technology to streamline development, deployment, and operational processes.</p>
             <div class="tech-grid">
@@ -421,7 +443,7 @@ tr {
                 
             </div><div class="section">
             <h2>About Me</h2>
-            <p>I grew up in Waldbüttelbrunn, Germany, and earned my Abitur at Deutschhaus Gymnasium in Würzburg in 2006. After military service, I studied technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's in electrical engineering at FernUniversität Hagen. In 2014 I relocated to the United States and moved into software engineering in Philadelphia, where I've built my career ever since—growing from hands-on DevOps and SRE work into technical leadership.</p></div><div class="section">
+            <p>I grew up in Waldbüttelbrunn, Germany, and earned my Abitur at Deutschhaus Gymnasium in Würzburg in 2006. After military service, I studied technical physics at Technische Universität Ilmenau, graduating in 2011. While working at Siemens in Berlin, I began a master's in electrical engineering at FernUniversität Hagen. In 2014 I relocated to the United States and moved into software engineering in Philadelphia, where I've built my career ever since—growing from hands-on DevOps and SRE work into technical leadership.</p></div><div class="section contact-section">
             <h2>Contact</h2>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-expanded="false">
                 Contact Me
