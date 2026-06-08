@@ -1,0 +1,221 @@
+:root {
+    --bg: #f4f4f4;
+    --surface: #fff;
+    --text: #222;
+    --muted: #666;
+    --heading: #333;
+    --border: #e6e6e6;
+    --accent: #0d6efd; /* matches Bootstrap primary */
+    --star: #f5b301;
+    --radius: 8px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.profile-img {
+    max-width: 200px;
+    border: 3px solid var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.section h2 {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.section h3 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--heading);
+}
+
+.section h4 {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+}
+
+/* Skills */
+.skills-table {
+    width: 100%;
+    border-spacing: 0 8px;
+}
+
+.skills-table td {
+    padding: 4px 0;
+}
+
+.skills-table tr {
+    line-height: 1.1;
+}
+
+.skill-name {
+    font-weight: 500;
+    width: 12%;
+    padding-right: 25px;
+    padding-left: 12%;
+}
+
+.divider {
+    width: 2%;
+    background-color: var(--border);
+}
+
+.star-rating {
+    color: var(--star);
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+/* Tech stack */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.tech-item {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.tech-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.tech-item h4 {
+    margin-bottom: 0.5rem;
+}
+
+.tech-item p {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+/* Profile / social links */
+.link-icon {
+    height: 1.1em;
+    width: auto;
+    margin-right: 0.4em;
+    vertical-align: -0.15em;
+}
+
+/* Lists */
+.section ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.section li,
+.achievements-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.achievements-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media print {
+    @page {
+        margin: 0.75in;
+    }
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        font-size: 12pt;
+    }
+
+    /* Use the full printable width inside the @page margins */
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    /* Hide interactive / supplementary sections from the printed/PDF résumé */
+    .contact-section,
+    .tech-stack-section {
+        display: none !important;
+    }
+
+    .profile-img {
+        max-width: 150px;
+        box-shadow: none;
+    }
+
+    .star-rating {
+        color: black;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Only spell out URLs for the social/profile links, not every link */
+    .profile-links a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    /* Render the header social buttons as plain text on paper */
+    .profile-links .btn {
+        border: none;
+        padding: 0;
+        margin: 0 1rem 0 0;
+        color: black;
+        font-size: 12pt;
+    }
+
+    .profile-links .link-icon {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        page-break-after: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
