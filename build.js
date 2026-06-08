@@ -35,6 +35,9 @@ const { JSDOM } = jsdom;
             console.log('CSS styles embedded into the HTML head.');
         }
 
+        // All résumé sections render into the #resume container (Bootstrap .container)
+        const resume = dom.window.document.getElementById('resume');
+
         const header = dom.window.document.createElement("div");
         header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
@@ -58,7 +61,7 @@ const { JSDOM } = jsdom;
                 </div>
             </div>
         `;
-        dom.window.document.body.appendChild(header);
+        resume.appendChild(header);
 
         // Skills Section
         const skills = dom.window.document.createElement("div");
@@ -100,7 +103,7 @@ const { JSDOM } = jsdom;
                     }).join('')}
                 </tbody>
             </table>`;
-        dom.window.document.body.appendChild(skills);
+        resume.appendChild(skills);
 
         // Tech Stack Section
         const techStack = dom.window.document.createElement("div");
@@ -120,7 +123,7 @@ const { JSDOM } = jsdom;
                     </div>
                 `).join('')}
             </div>`;
-        dom.window.document.body.appendChild(techStack);
+        resume.appendChild(techStack);
 
         // Jobs Section
         const jobs = dom.window.document.createElement("div");
@@ -139,7 +142,7 @@ const { JSDOM } = jsdom;
                 `).join("")}
             `;
         });
-        dom.window.document.body.appendChild(jobs);
+        resume.appendChild(jobs);
 
         // About Me Section
         const about = dom.window.document.createElement("div");
@@ -147,7 +150,7 @@ const { JSDOM } = jsdom;
         about.innerHTML = `
             <h2>About Me</h2>
             <p>${data.profile.AboutMe}</p>`;
-        dom.window.document.body.appendChild(about);
+        resume.appendChild(about);
 
         // Contact Form Section
         const contactSection = dom.window.document.createElement("div");
@@ -175,7 +178,7 @@ const { JSDOM } = jsdom;
                     </div>
                 </div>
             </div>`;
-        dom.window.document.body.appendChild(contactSection);
+        resume.appendChild(contactSection);
 
         // Reference message.js in the output HTML for dynamic functionality
         const messageFilePath = path.resolve(__dirname, 'src', 'message.js');
