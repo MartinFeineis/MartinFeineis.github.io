@@ -47,6 +47,12 @@ const { JSDOM } = jsdom;
                 <ul class="achievements-list">
                     ${data.profile.KeyAchievements.map(achievement => `<li>${achievement}</li>`).join('')}
                 </ul>
+                <div class="profile-links mt-3">
+                    ${data.profile.userlinks.map(link => {
+                        const [name, url] = Object.entries(link)[0];
+                        return `<a href="${url}" class="btn btn-outline-primary btn-sm me-2 mb-2" target="_blank" rel="noopener">${name}</a>`;
+                    }).join('')}
+                </div>
             </div>
         `;
         dom.window.document.body.appendChild(header);
@@ -92,6 +98,26 @@ const { JSDOM } = jsdom;
                 </tbody>
             </table>`;
         dom.window.document.body.appendChild(skills);
+
+        // Tech Stack Section
+        const techStack = dom.window.document.createElement("div");
+        techStack.classList.add("section");
+        techStack.innerHTML = `
+            <h2>Tech Stack</h2>
+            <p>${data.TechIcons.Description}</p>
+            <div class="tech-grid">
+                ${Object.entries(data.TechIcons.techstack).map(([key, tech]) => `
+                    <div class="tech-item">
+                        <img src="${tech.bgimg}" alt="${tech.title}" class="tech-icon">
+                        <h4>${tech.title}</h4>
+                        <p>${tech.desc}</p>
+                        ${tech.links && tech.links.length
+                            ? `<p>${tech.links.map(l => `<a href="${l.target}" target="_blank" rel="noopener">${l.name}</a>`).join(' · ')}</p>`
+                            : ''}
+                    </div>
+                `).join('')}
+            </div>`;
+        dom.window.document.body.appendChild(techStack);
 
         // Jobs Section
         const jobs = dom.window.document.createElement("div");
