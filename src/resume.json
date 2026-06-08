@@ -89,15 +89,19 @@
         "Name": "Martin Feineis",
         "userlinks": [
             {
-                "LinkedIn": "https://www.linkedin.com/in/martinfeineis/"
+                "bgimg" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
+                "LinkedIn" : "https://www.linkedin.com/in/martinfeineis/"
             },
             {
+                "bgimg" : "https://corporate.xing.com/NWSE/brand-logos/Logo-navi--xing.svg",
                 "XING": "https://www.xing.com/profile/Martin_Feineis/"
             },
             {
+                "bgimg" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
                 "Github": "https://github.com/MartinFeineis"
             },
             {
+                "bgimg" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitbook/gitbook-original.svg",
                 "Gitbooks": "https://lib.rjo.me/newlib"
             }
         ],

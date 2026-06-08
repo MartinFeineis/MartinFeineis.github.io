@@ -50,8 +50,10 @@ const { JSDOM } = jsdom;
                 </ul>
                 <div class="profile-links mt-3">
                     ${data.profile.userlinks.map(link => {
-                        const [name, url] = Object.entries(link)[0];
-                        return `<a href="${url}" class="btn btn-outline-primary btn-sm me-2 mb-2" target="_blank" rel="noopener">${name}</a>`;
+                        const { bgimg, ...rest } = link;
+                        const [name, url] = Object.entries(rest)[0];
+                        const icon = bgimg ? `<img src="${bgimg}" alt="" class="link-icon">` : '';
+                        return `<a href="${url}" class="btn btn-outline-primary btn-sm me-2 mb-2" target="_blank" rel="noopener">${icon}${name}</a>`;
                     }).join('')}
                 </div>
             </div>

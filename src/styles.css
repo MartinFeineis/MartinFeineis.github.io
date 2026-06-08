@@ -138,6 +138,13 @@ tr {
     color: #666;
 }
 
+.link-icon {
+    height: 1.1em;
+    width: auto;
+    margin-right: 0.4em;
+    vertical-align: -0.15em;
+}
+
 .section ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
@@ -215,6 +222,10 @@ tr {
         margin: 0 1rem 0 0;
         color: black;
         font-size: 12pt;
+    }
+
+    .profile-links .link-icon {
+        display: none;
     }
 
     /* Keep each tech card intact across page breaks */
