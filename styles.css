@@ -52,46 +52,30 @@ body {
 }
 
 /* Skills */
-.skills-table {
-    width: 100%;
-    border-spacing: 0 8px;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    column-gap: 2.5rem;
+    row-gap: 0.25rem;
 }
 
-.skills-table td {
-    padding: 4px 0;
-    vertical-align: middle;
-}
-
-.skills-table tr {
-    line-height: 1.1;
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .skill-name {
     font-weight: 500;
-    width: 30%;
-    padding-right: 1rem; /* space between a skill name and its stars */
 }
 
 .star-rating {
     color: var(--star);
     font-size: 1.2rem;
-    width: 18%;
-}
-
-/* Thin divider line (a border, so it can't balloon) */
-.divider {
-    width: 0;
-    padding: 0;
-    border-left: 2px solid var(--border);
-}
-
-/* Equal breathing room on each side of the divider */
-.skills-table td:nth-child(2) {
-    padding-right: 2rem;
-}
-
-.skills-table td:nth-child(4) {
-    padding-left: 2rem;
+    white-space: nowrap;
 }
 
 /* Tech stack */
