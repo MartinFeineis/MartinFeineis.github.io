@@ -175,6 +175,12 @@ tr {
         display: none;
     }
 
+    /* Hide interactive / supplementary sections from the printed/PDF résumé */
+    .contact-section,
+    .tech-stack-section {
+        display: none !important;
+    }
+
     .profile-img {
         max-width: 150px;
         box-shadow: none;
@@ -195,10 +201,26 @@ tr {
         color: black;
     }
 
-    a[href]:after {
+    /* Only spell out URLs for the social/profile links, not every link */
+    .profile-links a[href]:after {
         content: " (" attr(href) ")";
         font-size: 10pt;
         font-style: italic;
+    }
+
+    /* Render the header social buttons as plain text on paper */
+    .profile-links .btn {
+        border: none;
+        padding: 0;
+        margin: 0 1rem 0 0;
+        color: black;
+        font-size: 12pt;
+    }
+
+    /* Keep each tech card intact across page breaks */
+    .tech-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     h1,

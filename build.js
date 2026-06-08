@@ -34,6 +34,7 @@ const { JSDOM } = jsdom;
 
             console.log('CSS styles embedded into the HTML head.');
         }
+
         const header = dom.window.document.createElement("div");
         header.classList.add("header", "row", "align-items-center", "mb-4");
         header.innerHTML = `
@@ -101,7 +102,7 @@ const { JSDOM } = jsdom;
 
         // Tech Stack Section
         const techStack = dom.window.document.createElement("div");
-        techStack.classList.add("section");
+        techStack.classList.add("section", "tech-stack-section");
         techStack.innerHTML = `
             <h2>Tech Stack</h2>
             <p>${data.TechIcons.Description}</p>
@@ -148,7 +149,7 @@ const { JSDOM } = jsdom;
 
         // Contact Form Section
         const contactSection = dom.window.document.createElement("div");
-        contactSection.classList.add("section");
+        contactSection.classList.add("section", "contact-section");
         contactSection.innerHTML = `
             <h2>Contact</h2>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contactForm" aria-expanded="false">
