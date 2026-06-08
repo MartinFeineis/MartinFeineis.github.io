@@ -4,33 +4,43 @@
     <title>Martin Feineis Resume</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-<style>body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+<style>:root {
+    --bg: #f4f4f4;
+    --surface: #fff;
+    --text: #222;
+    --muted: #666;
+    --heading: #333;
+    --border: #e6e6e6;
+    --accent: #0d6efd; /* matches Bootstrap primary */
+    --star: #f5b301;
+    --radius: 8px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.resume-container {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
 }
 
 .profile-img {
     max-width: 200px;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--surface);
+    box-shadow: var(--shadow);
 }
 
 .section {
     margin-bottom: 2rem;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
+    padding: 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .section h2 {
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid var(--accent);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
@@ -38,51 +48,16 @@
 .section h3 {
     font-size: 1.5rem;
     margin-top: 1.5rem;
-    color: #333;
+    color: var(--heading);
 }
 
 .section h4 {
     font-size: 1.1rem;
-    color: #666;
+    color: var(--muted);
     margin-top: 0.5rem;
 }
 
-.picture-gallery {
-    border: 5px solid darkred;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 266px));
-    gap: 1.5rem;
-    padding: 1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    justify-content: center;
-    width: 800px;
-}
-
-.picture-gallery img {
-    max-width: 800px;
-    width: 800px;
-    border: 5px solid darkblue;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    page-break-inside: avoid;
-}
-
-.gallery-img {
-    border: 5px solid darkgoldenrod;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    page-break-inside: avoid;
-}
-
+/* Skills */
 .skills-table {
     width: 100%;
     border-spacing: 0 8px;
@@ -92,9 +67,8 @@
     padding: 4px 0;
 }
 
-tr {
-    line-height: 110%;
-    /* Set the line height to 1.5 times the font size */
+.skills-table tr {
+    line-height: 1.1;
 }
 
 .skill-name {
@@ -106,15 +80,16 @@ tr {
 
 .divider {
     width: 2%;
-    background-color: #eee;
+    background-color: var(--border);
 }
 
 .star-rating {
-    color: #ffd700;
+    color: var(--star);
     font-size: 1.2rem;
     text-align: left;
 }
 
+/* Tech stack */
 .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -124,8 +99,8 @@ tr {
 
 .tech-item {
     padding: 1rem;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     text-align: center;
 }
 
@@ -141,9 +116,10 @@ tr {
 
 .tech-item p {
     font-size: 0.9rem;
-    color: #666;
+    color: var(--muted);
 }
 
+/* Profile / social links */
 .link-icon {
     height: 1.1em;
     width: auto;
@@ -151,6 +127,7 @@ tr {
     vertical-align: -0.15em;
 }
 
+/* Lists */
 .section ul {
     margin-bottom: 1.5rem;
     padding-left: 1.5rem;
@@ -168,11 +145,22 @@ tr {
 }
 
 @media print {
+    @page {
+        margin: 0.75in;
+    }
+
     body {
         background-color: white;
         margin: 0;
-        padding: 20px;
+        padding: 0;
         font-size: 12pt;
+    }
+
+    /* Use the full printable width inside the @page margins */
+    .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
     }
 
     .section {
@@ -180,12 +168,9 @@ tr {
         page-break-inside: avoid;
         margin-bottom: 15pt;
         padding: 0;
+        border: none;
         box-shadow: none;
         border-radius: 0;
-    }
-
-    .section.picture-gallery {
-        display: none;
     }
 
     /* Hide interactive / supplementary sections from the printed/PDF résumé */
@@ -197,12 +182,6 @@ tr {
     .profile-img {
         max-width: 150px;
         box-shadow: none;
-    }
-
-    .container {
-        max-width: 8.5in;
-        margin: 0 auto;
-        padding: 0;
     }
 
     .star-rating {
@@ -234,12 +213,6 @@ tr {
         display: none;
     }
 
-    /* Keep each tech card intact across page breaks */
-    .tech-item {
-        break-inside: avoid;
-        page-break-inside: avoid;
-    }
-
     h1,
     h2,
     h3,
@@ -251,18 +224,13 @@ tr {
         orphans: 3;
         widows: 3;
     }
-}</style></head>
+}
+</style></head>
 <body>
     <div class="container mt-4">
         <div id="resume">
             <!-- Content will be dynamically loaded -->
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="message.js"></script>
-
-
-<div class="header row align-items-center mb-4">
+        <div class="header row align-items-center mb-4">
             <div class="col-md-3">
                 <img src="https://media.404founders.com/martinfeineis/picture0.webp" alt="Celebrating Open Source Technology for Enterprise" class="img-fluid rounded-circle profile-img">
             </div>
@@ -476,7 +444,13 @@ tr {
                         <p>Your message ID: <span id="sentMessageId"></span></p>
                     </div>
                 </div>
-            </div></div><script>document.addEventListener('DOMContentLoaded', () => {
+            </div></div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="message.js"></script>
+
+
+<script>document.addEventListener('DOMContentLoaded', () => {
     const messageForm = document.getElementById('messageForm');
     const messageStatus = document.getElementById('messageStatus');
     const sentMessageId = document.getElementById('sentMessageId');
