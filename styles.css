@@ -162,15 +162,17 @@ body {
         border-radius: 0;
     }
 
-    /* Hide interactive / supplementary sections from the printed/PDF résumé */
+    /* Hide interactive / supplementary sections (and the profile picture column) from the printed/PDF résumé */
     .contact-section,
-    .tech-stack-section {
+    .tech-stack-section,
+    .header .col-md-3 {
         display: none !important;
     }
 
-    .profile-img {
-        max-width: 150px;
-        box-shadow: none;
+    /* Let the text column fill the full page width once the picture is hidden */
+    .header .col-md-9 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
 
     .star-rating {
