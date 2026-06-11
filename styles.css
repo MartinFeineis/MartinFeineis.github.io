@@ -141,7 +141,7 @@ body {
     body {
         background-color: white;
         margin: 0;
-        padding: 0;
+        padding: 0 2% 0 2%;
         font-size: 12pt;
     }
 
@@ -171,8 +171,8 @@ body {
 
     /* Let the text column fill the full page width once the picture is hidden */
     .header .col-md-9 {
-        flex: 0 0 95% !important;
-        max-width: 95% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
 
     .star-rating {
