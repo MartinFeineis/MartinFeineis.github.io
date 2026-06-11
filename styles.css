@@ -171,8 +171,8 @@ body {
 
     /* Let the text column fill the full page width once the picture is hidden */
     .header .col-md-9 {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
+        flex: 0 0 95% !important;
+        max-width: 95% !important;
     }
 
     .star-rating {
